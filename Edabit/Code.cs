@@ -21,8 +21,8 @@ namespace Edabit
         // Remove All Special Characters from a String - https://edabit.com/challenge/SfZx7qzXheYQxtQbF
         public static string RemoveSpecialCharacters(string str)
         {
-            return Regex.Replace(str, @"[^\w\.@-]", "",
-                                RegexOptions.None, TimeSpan.FromSeconds(1.5));
+            return Regex.Replace(str, @"[^\w\.@-]", "");
+                                
         }
     }
 }
