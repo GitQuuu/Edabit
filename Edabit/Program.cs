@@ -10,7 +10,7 @@ namespace Edabit
 
             Code methods = new Code();
 
-            Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£")); 
+            Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£_-")); 
             
 
             Console.ReadLine();
