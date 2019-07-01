@@ -6,13 +6,14 @@ namespace Edabit
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("A run through edabit challenges");
+            Console.WriteLine("A run through edabit challenges\n");
 
             Code methods = new Code();
 
-            Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£_-")); 
-            
+            Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£_-"));
 
+            Code.IsPlural("Trees");
+        
             Console.ReadLine();
         }
     }
