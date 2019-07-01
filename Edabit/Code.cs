@@ -59,9 +59,10 @@ namespace Edabit
             {
                 for (int index = 0; index < str.Length; index++)
                 {
+                    // without this the program will crash because we are out of our array boundaries
                     if (index - 1 >= 0)
                     {
-                        if (str[index] == element && char.IsLetterOrDigit(str[index - 1]))
+                        if (str[index] == element && char.IsLetterOrDigit(str[index - 1]) && !char.IsPunctuation(str[index + 1]) )
                         {
                             match++;
                         }

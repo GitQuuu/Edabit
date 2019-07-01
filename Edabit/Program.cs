@@ -16,7 +16,7 @@ namespace Edabit
 
             Code.IsPlural("Trees");
 
-            Code.ValidateEmail("hello.gmail@com");
+            Code.ValidateEmail("hello@email");
         
             Console.ReadLine();
         }
