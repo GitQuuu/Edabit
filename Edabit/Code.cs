@@ -53,7 +53,37 @@ namespace Edabit
         // Basic E-Mail Validation - https://edabit.com/challenge/egy6LWExtnR6JkwBg
         public static bool ValidateEmail(string str, char[] includeSymbols)
         {
+            int match = 0;
             foreach (char element in includeSymbols)
+            {
+                for (int index = 0; index < str.Length; index++)
+                {
+                    if (index - 1 >= 0)
+                    {
+                        if (str[index] == element && char.IsLetterOrDigit(str[index - 1]))
+                        {
+                            match++;
+                        }
+                    }
+     
+                }
+                if (match == 0)
+                {
+                    break;
+                }
+            }
+
+            if (match >= 1)
+            {
+                Console.WriteLine("Email valid");
+                return true;
+            }
+            else
+            {
+                
+                Console.WriteLine("Email not valid");
+                return false;
+            }
         }
 
 
