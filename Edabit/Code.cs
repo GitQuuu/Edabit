@@ -51,10 +51,11 @@ namespace Edabit
         }
 
         // Basic E-Mail Validation - https://edabit.com/challenge/egy6LWExtnR6JkwBg
-        public static bool ValidateEmail(string str, char[] includeSymbols)
+        public static bool ValidateEmail(string str)
         {
+            char[] symbols = { '@', '.' };
             int match = 0;
-            foreach (char element in includeSymbols)
+            foreach (char element in symbols)
             {
                 for (int index = 0; index < str.Length; index++)
                 {

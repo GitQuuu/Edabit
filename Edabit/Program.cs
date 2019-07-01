@@ -8,7 +8,7 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
-            char[] symbols = { '@', '.' };
+            
 
             Code methods = new Code();
 
@@ -16,7 +16,7 @@ namespace Edabit
 
             Code.IsPlural("Trees");
 
-            Code.ValidateEmail("hello.gmail@com", symbols);
+            Code.ValidateEmail("hello.gmail@com");
         
             Console.ReadLine();
         }
