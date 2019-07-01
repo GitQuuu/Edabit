@@ -8,11 +8,15 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
+            char[] symbols = { '@', '.' };
+
             Code methods = new Code();
 
             Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£_-"));
 
             Code.IsPlural("Trees");
+
+            Code.ValidateEmail("hello.gmail@com", symbols);
         
             Console.ReadLine();
         }
