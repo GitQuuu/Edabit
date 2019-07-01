@@ -14,7 +14,7 @@ namespace Edabit
 
         // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
         public static string FormatNum(int num)
-        {
+        {   // 0 represents the 1st variabel N0 represents number of digits
             return string.Format("{0:N0}", num);
         }
 
