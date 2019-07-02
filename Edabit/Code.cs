@@ -55,6 +55,9 @@ namespace Edabit
         {
             char[] symbols = { '@', '.' };
             int match = 0;
+            int EmailPos = 0;
+            int PeriodPos = 0;
+
             foreach (char element in symbols)
             {
                 for (int index = 0; index < str.Length; index++)
@@ -67,14 +70,18 @@ namespace Edabit
                             match++;
                         }
 
-                        //if (str.Contains(symbols[1]))
-                        //{
-                        //    Console.WriteLine("test");
-                        //    break;
-                        //}
+                        if (str[index] == symbols[0] )
+                        {
+                            EmailPos = index;                           
+                        }
 
+                        if (str[index] == symbols[1])
+                        {
+                            PeriodPos = index;
+                        }
+                  
                     }
-     
+
                 }
                 if (match == 0)
                 {
@@ -82,7 +89,7 @@ namespace Edabit
                 }
             }
 
-            if (match >= 1)
+            if (match >= 1 && EmailPos < PeriodPos)
             {
                 Console.WriteLine("Email valid");
                 return true;
@@ -94,8 +101,6 @@ namespace Edabit
                 return false;
             }
         }
-
-
 
     }
 }
