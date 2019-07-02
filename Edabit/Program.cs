@@ -11,11 +11,14 @@ namespace Edabit
             
 
             Code methods = new Code();
+            Task task = new Task();
 
             Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£_-"));
 
             Code.IsPlural("Trees");
 
+            Task.PrintLine(150);
+            Task.DisplayValidateEmailTask();
             Console.Write("\n@edabit.com :              ");                 Code.ValidateEmail("@edabit.com");
             Console.Write("\n@edabit :                  ");                     Code.ValidateEmail("@edabit");
             Console.Write("\nmatt@edabit.com :          ");             Code.ValidateEmail("matt@edabit.com");
@@ -26,6 +29,13 @@ namespace Edabit
             Console.Write("\n%^%$#%^% :                 ");                    Code.ValidateEmail("%^%$#%^%");
             Console.Write("\nwww.email.com :            ");               Code.ValidateEmail("www.email.com");
             Console.Write("\nemail :                    ");                       Code.ValidateEmail("email");
+            Console.WriteLine("");
+            Task.PrintLine(150);
+
+
+
+
+
 
             Console.ReadLine();
         }
