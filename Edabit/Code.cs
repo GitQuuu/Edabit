@@ -62,11 +62,17 @@ namespace Edabit
                     // without this the program will crash because we are out of our array boundaries
                     if (index - 1 >= 0)
                     {
-                        if (str[index] == element && char.IsLetterOrDigit(str[index - 1]) && !char.IsPunctuation(str[index + 1]) && str.Contains("."))
+                        if (str[index] == element && char.IsLetterOrDigit(str[index - 1]) && !char.IsPunctuation(str[index + 1]) && str.Contains(symbols[1]))
                         {
                             match++;
                         }
-                        
+
+                        //if (str.Contains(symbols[1]))
+                        //{
+                        //    Console.WriteLine("test");
+                        //    break;
+                        //}
+
                     }
      
                 }
