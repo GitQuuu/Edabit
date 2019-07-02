@@ -74,12 +74,11 @@ namespace Edabit
                         {
                             EmailPos = index;                           
                         }
-
-                        if (str[index] == symbols[1])
+                        else if (str[index] == symbols[1])
                         {
                             PeriodPos = index;
                         }
-                  
+           
                     }
 
                 }
@@ -91,13 +90,13 @@ namespace Edabit
 
             if (match >= 1 && EmailPos < PeriodPos)
             {
-                Console.WriteLine("Email valid");
+                Console.Write("Email valid");
                 return true;
             }
             else
             {
                 
-                Console.WriteLine("Email not valid");
+                Console.Write("Email not valid");
                 return false;
             }
         }
