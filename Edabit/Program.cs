@@ -8,14 +8,18 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
-            
-
             Code methods = new Code();
             Task task = new Task();
 
-            Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£_-"));
+            Task.PrintLine(150);
+            Task.DisplayRemoveSpecialCharacters();
+            Console.Write("\nRemove%Specials£_-         "); Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£_-"));
+           
 
-            Code.IsPlural("Trees");
+            Task.PrintLine(150);
+            Task.DisplaySingularOrPlural();
+            Console.Write("\nTrees                      "); Code.IsPlural("Trees");
+           
 
             Task.PrintLine(150);
             Task.DisplayValidateEmailTask();
