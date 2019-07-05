@@ -10,10 +10,9 @@ namespace Edabit
     class Code
     {
 
-        ///<summary> Difficulty: very easy
-        ///</summary>
-
-        // Is the Word Singular or Plural? https://edabit.com/challenge/virMEraL59KKGQdDv
+        ///<summary> Difficulty: very easy 
+        /// Is the Word Singular or Plural? https://edabit.com/challenge/virMEraL59KKGQdDv  
+        ///</summary>         
         public static bool IsPlural(string word)
         {
             if (word.EndsWith("s"))
