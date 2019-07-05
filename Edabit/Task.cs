@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayLargestNumberInArray()
+        {
+            Console.WriteLine("Create a function that takes an array of numbers. Return the largest number in the array.");
+        }
         public static void DisplayCheckStringForSpaces()
         {
             Console.WriteLine("Create a function that returns true if a string contains any spaces.");

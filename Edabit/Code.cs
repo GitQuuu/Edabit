@@ -42,6 +42,21 @@ namespace Edabit
         ///<summary> Difficulty: easy
         ///</summary>
 
+        public static int FindLargestNum(int[] arr)
+        {
+            int highestValue = 0;
+
+            for (int index = 0; index < arr.Length; index++)
+            {
+                if (arr[index] > highestValue)
+                {
+                    highestValue = arr[index];
+                }
+            }
+
+            return highestValue;
+        }
+
         // Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m
         public static string RemoveFirstLast(string str)
         {   // The reason for this to be correct and apparently not 0 and Length-1 is because quotation marks is part of the string array on index 0 and Length-1
