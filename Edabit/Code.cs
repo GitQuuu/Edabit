@@ -33,6 +33,14 @@ namespace Edabit
             return word.Substring(word.Length - 1, 1) == "s" ? true : false;
         }
 
+        // Missing third angle - https://edabit.com/challenge/SZwKNfxC9JBsG99Gz
+        public static string MissingAngle(int angle1, int angle2)
+        {
+            string result = "";
+
+            return result;
+        }
+
         // Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
         public static bool HasSpaces(string str)
         {

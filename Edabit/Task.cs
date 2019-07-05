@@ -6,6 +6,15 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayMissingThirdAngle()
+        {
+            Console.WriteLine("Write a function that classifies the missing angle as either \"acute\", \"right\", or \"obtuse\" based on its degrees.");
+            Console.WriteLine("An acute angle is one smaller than 90 degrees.");
+            Console.WriteLine("A right angle is one that is exactly 90 degrees.");
+            Console.WriteLine("An obtuse angle is one greater than 90 degrees (but smaller than 180 degrees).");
+
+            Console.WriteLine("For example: MissingAngle(11, 20) should return \"obtuse\", since the missing angle would be 149 degrees, which makes it obtuse.");
+        }
         public static void DisplayLargestNumberInArray()
         {
             Console.WriteLine("Create a function that takes an array of numbers. Return the largest number in the array.");
