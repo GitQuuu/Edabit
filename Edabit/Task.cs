@@ -35,6 +35,7 @@ namespace Edabit
             Console.WriteLine("The string must contain a . character.");
             Console.WriteLine("The @ must have at least one character in front of it.");
             Console.WriteLine("The . and the @ must be in the appropriate places.");
+            Console.WriteLine("The email cannot end with .");
             
         }
 
