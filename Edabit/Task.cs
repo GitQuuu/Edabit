@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayFirstAndLastCharacter()
+        {
+            Console.WriteLine("Create a function that removes the first and last characters from a string.");
+        }
         public static void DisplaySingularOrPlural()
         {
             Console.WriteLine("Create a function that takes in a word and determines whether or not it is plural. A plural word is one that ends in \"s\".");

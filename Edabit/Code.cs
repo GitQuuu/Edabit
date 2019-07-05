@@ -32,8 +32,25 @@ namespace Edabit
         {   // does the same as above just a more in depth method
             return word.Substring(word.Length - 1, 1) == "s" ? true : false;
         }
-        
-        
+
+        ///<summary> Difficulty: easy
+        ///</summary>
+
+        // Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m
+        public static string RemoveFirstLast(string str)
+        {   // The reason for this to be correct and apparently not 0 and Length-1 is because quotation marks is part of the string array on index 0 and Length-1
+            if (str.Length > 3)
+            {
+                str = str.Substring(1, str.Length - 2);
+                return str;
+            }
+            else
+            {
+                return str;
+            }
+           
+        }
+
         ///<summary>
         ///Difficulty: Medium
         ///</summary>
