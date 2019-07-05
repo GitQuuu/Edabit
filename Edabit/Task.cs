@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayCheckStringForSpaces()
+        {
+            Console.WriteLine("Create a function that returns true if a string contains any spaces.");
+        }
         public static void DisplayFirstAndLastCharacter()
         {
             Console.WriteLine("Create a function that removes the first and last characters from a string.");

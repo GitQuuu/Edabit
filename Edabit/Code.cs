@@ -36,6 +36,12 @@ namespace Edabit
         ///<summary> Difficulty: easy
         ///</summary>
 
+        // Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
+        public static bool HasSpaces(string str)
+        {
+            return str.Contains(" ") ? true : false;
+        }
+
         // Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m
         public static string RemoveFirstLast(string str)
         {   // The reason for this to be correct and apparently not 0 and Length-1 is because quotation marks is part of the string array on index 0 and Length-1

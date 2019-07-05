@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayCheckStringForSpaces();
+            Console.Write("\nCheckThisStringForSpaces   "); Console.WriteLine(Code.HasSpaces("CheckThisStringForSpaces"));
+
+            Task.PrintLine(150);
             Task.DisplayFirstAndLastCharacter();
             Console.Write("\nHello Edabit :             "); Console.WriteLine(Code.RemoveFirstLast("Hello Edabit")); 
 
