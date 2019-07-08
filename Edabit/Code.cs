@@ -97,6 +97,15 @@ namespace Edabit
             return str.Contains(" ") ? true : false;
         }
 
+        ///<summary>
+        /// very easy:
+        /// Slice of Pie , split the pie fairly?
+        ///</summary>
+        public static bool EqualSlices(int total, int people, int each)
+        {
+            return people * each <= total ? true : false;
+        }
+
         //Easy
         ///<summary>easy:
         /// Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m

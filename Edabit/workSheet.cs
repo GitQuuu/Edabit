@@ -7,10 +7,9 @@ namespace Edabit
     class workSheet
     {
 
-        public static object GetLastItem(object[] arr)
+        public static bool EqualSlices(int total, int people, int each)
         {
-
-            return arr[arr.Length - 1];
+            return people * each <= total ? true : false;    
         }
     }
 }

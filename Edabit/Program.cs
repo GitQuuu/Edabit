@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplaySliceOfPie();
+            Console.WriteLine("\nSlices 11, Recipients 5, each 2 : " + Code.EqualSlices(11,5,2));
+
+            Task.PrintLine(150);
             Task.DisplayReturnLastElement();
             Console.WriteLine("\n\"Cat\", \"Dog\", \"Duck\" :    " +  Code.GetLastItem(new object[] { "Cat", "Dog", "Duck" }));
 
