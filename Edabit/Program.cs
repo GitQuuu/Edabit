@@ -9,24 +9,28 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayMissingThirdAngle();
+            Console.WriteLine("Missing angle is :        " + Code.MissingAngle(135, 11));
+
+            Task.PrintLine(150);
             Task.DisplayLargestNumberInArray();
-            Console.Write("\nMax value in {1,3,5,87} :  "); Console.WriteLine(Code.FindLargestNum(new int[]{ 1, 3, 5, 87 }));
+            Console.WriteLine("Max value in {1,3,5,87} :  " + Code.FindLargestNum(new int[]{ 1, 3, 5, 87 }));
             
             Task.PrintLine(150);
             Task.DisplayCheckStringForSpaces();
-            Console.Write("\nCheckThisStringForSpaces : "); Console.WriteLine(Code.HasSpaces("CheckThisStringForSpaces"));
+            Console.WriteLine("\nCheckThisStringForSpaces : " + Code.HasSpaces("CheckThisStringForSpaces"));
             
             Task.PrintLine(150);
             Task.DisplayFirstAndLastCharacter();
-            Console.Write("\nHello Edabit :             "); Console.WriteLine(Code.RemoveFirstLast("Hello Edabit")); 
+            Console.WriteLine("\nHello Edabit :             " + Code.RemoveFirstLast("Hello Edabit")); 
             
             Task.PrintLine(150);
             Task.DisplayRemoveSpecialCharacters();
-            Console.Write("\nRemove%Specials£_-         "); Console.WriteLine(Code.RemoveSpecialCharacters("Remove%Specials£_-"));            
+            Console.WriteLine("\nRemove%Specials£_- :       " + Code.RemoveSpecialCharacters("Remove%Specials£_-"));            
             
             Task.PrintLine(150);
             Task.DisplaySingularOrPlural();
-            Console.Write("\nTrees                      "); Code.IsPlural("Trees");            
+            Console.WriteLine($"\nTrees :                    " + Code.IsPlural("Trees"));            
             
             Task.PrintLine(150);
             Task.DisplayValidateEmailTask();

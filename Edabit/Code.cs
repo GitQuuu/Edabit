@@ -35,9 +35,26 @@ namespace Edabit
         // Missing third angle - https://edabit.com/challenge/SZwKNfxC9JBsG99Gz
         public static string MissingAngle(int angle1, int angle2)
         {
-            string result = "";
+            angle1 = angle1;
+            angle2 = angle2;
+            int maxDegree = 180;            
+            
 
-            return result;
+            string missingAngle = "";
+
+            if ((maxDegree - angle1 - angle2) < 90)
+            {
+                return missingAngle = "acute";
+            }
+            else if ((maxDegree - angle1 - angle2) == 90)
+            {
+                return missingAngle = "right";
+            }
+            else 
+            {
+                return missingAngle = "obtuse";
+            }
+
         }
 
         // Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
