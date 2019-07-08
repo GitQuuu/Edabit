@@ -10,7 +10,7 @@ namespace Edabit
     class Code
     {
         // very easy
-        ///<summary> Difficulty: very easy 
+        ///<summary>very easy: 
         /// Is the Word Singular or Plural? https://edabit.com/challenge/virMEraL59KKGQdDv  
         ///</summary>         
         public static bool IsPlural(string word)
@@ -39,7 +39,7 @@ namespace Edabit
             return DateTime.DaysInMonth(year, month);
         }
 
-        ///<summary> Difficulty: very easy 
+        ///<summary>very easy: 
         /// Missing third angle - https://edabit.com/challenge/SZwKNfxC9JBsG99Gz
         ///</summary>
         public static string MissingAngle(int angle1, int angle2)
@@ -62,7 +62,7 @@ namespace Edabit
 
         }
 
-        ///<summary> Difficulty: very easy 
+        ///<summary>very easy: 
         /// return the last element in array - https://edabit.com/challenge/oMFuP2d4Qr53HG588
         ///</summary>  
         public static object GetLastItem(object[] arr)
@@ -71,11 +71,9 @@ namespace Edabit
             return arr[arr.Length - 1];
         }
 
-        /// <summary>
-        /// Difficulty: very easy - Find the Largest Number in an Array - https://edabit.com/challenge/4huAhWBE7f3asEFAz
+        /// <summary>very easy:
+        /// Find the Largest Number in an Array - https://edabit.com/challenge/4huAhWBE7f3asEFAz
         /// </summary>
-        /// <param name="arr"></param>
-        /// <returns></returns>
         public static int FindLargestNum(int[] arr)
         {
             int highestValue = 0;
@@ -91,7 +89,7 @@ namespace Edabit
             return highestValue;
         }
 
-        ///<summary> Difficulty: very easy 
+        ///<summary> very easy: 
         /// Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
         ///</summary>  
         public static bool HasSpaces(string str)
@@ -99,8 +97,8 @@ namespace Edabit
             return str.Contains(" ") ? true : false;
         }
 
-        //easy
-        ///<summary> Difficulty: easy
+        //Easy
+        ///<summary>easy:
         /// Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m
         ///</summary>     
         public static string RemoveFirstLast(string str)
@@ -117,6 +115,7 @@ namespace Edabit
            
         }
 
+        //Medium
         ///<summary>
         ///Difficulty: Medium
         ///</summary>
