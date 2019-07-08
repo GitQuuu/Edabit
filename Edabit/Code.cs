@@ -106,12 +106,11 @@ namespace Edabit
             }
             return lowestNum;
         }
-    
 
-    ///<summary> very easy: 
-    /// Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
-    ///</summary>  
-    public static bool HasSpaces(string str)
+        ///<summary> very easy: 
+        /// Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
+        ///</summary>  
+        public static bool HasSpaces(string str)
         {
             return str.Contains(" ") ? true : false;
         }
@@ -141,6 +140,16 @@ namespace Edabit
                 return str;
             }
            
+        }
+
+        /// <summary>
+        /// Easy:
+        /// Create a function that returns the smaller number. - https://edabit.com/challenge/uBqpafqjoYNPuQ7Pr
+        /// </summary>
+        public static string smallerNum(string n1, string n2)
+        {
+
+            return Convert.ToInt32(n1) < Convert.ToInt32(n2) ? n1 : n2;
         }
 
         //Medium

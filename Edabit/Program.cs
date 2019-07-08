@@ -8,7 +8,10 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
-            
+            Task.PrintLine(150);
+            Task.Display
+            Console.WriteLine("100 , 200 :                         " + Code.smallerNum("100","200"));
+
 
             Task.PrintLine(150);
             Task.DisplaySliceOfPie();

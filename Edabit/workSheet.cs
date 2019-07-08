@@ -7,18 +7,9 @@ namespace Edabit
     class workSheet
     {
 
-        public static double FindSmallestNum(double[] arr)
+        public static string smallerNum(string n1, string n2)
         {
-            double lowestNum = arr[0];
-
-            foreach  (double element in arr)
-            {
-                if (element < lowestNum)
-                {
-                    lowestNum = element;
-                }
-            }
-            return lowestNum;
+            return Convert.ToInt32(n1) < Convert.ToInt32(n2) ? n1 : n2;
         }
     }
 }

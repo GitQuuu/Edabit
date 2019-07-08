@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplaySmallerStringNumber()
+        {
+            Console.WriteLine("Create a function that returns the smaller number.");
+        }
         public static void DisplaySliceOfPie()
         {
             Console.WriteLine("Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:");
