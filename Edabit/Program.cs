@@ -8,9 +8,7 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
-            Task.PrintLine(150);
-            Task.DisplaySmallestNumberInArray();
-            Console.WriteLine("\nFind the smallest number in array :" + Code.FindSmallestNum(new double[] {30,1,2,3,4,5}));
+            
 
             Task.PrintLine(150);
             Task.DisplaySliceOfPie();
@@ -21,16 +19,20 @@ namespace Edabit
             Console.WriteLine("\n\"Cat\", \"Dog\", \"Duck\" :    " +  Code.GetLastItem(new object[] { "Cat", "Dog", "Duck" }));
 
             Task.PrintLine(150);
+            Task.DisplaySmallestNumberInArray();
+            Console.WriteLine("\nFind the smallest number in array :" + Code.FindSmallestNum(new double[] { 30, 1, 2, 3, 4, 5 }));
+
+            Task.PrintLine(150);
+            Task.DisplayLargestNumberInArray();
+            Console.WriteLine("Max value in {1,3,5,87} :  " + Code.FindLargestNum(new int[] { 1, 3, 5, 87 }));
+
+            Task.PrintLine(150);
             Task.DisplayDaysInMonth();
             Console.WriteLine("\nDays in month :           " + Code.Days(2,2018));
 
             Task.PrintLine(150);
             Task.DisplayMissingThirdAngle();
             Console.WriteLine($"Missing angle is :        " + Code.MissingAngle(135, 11));
-
-            Task.PrintLine(150);
-            Task.DisplayLargestNumberInArray();
-            Console.WriteLine("Max value in {1,3,5,87} :  " + Code.FindLargestNum(new int[]{ 1, 3, 5, 87 }));
             
             Task.PrintLine(150);
             Task.DisplayCheckStringForSpaces();
