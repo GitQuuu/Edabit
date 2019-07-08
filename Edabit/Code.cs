@@ -31,8 +31,9 @@ namespace Edabit
             return word.Substring(word.Length - 1, 1) == "s" ? true : false;
         }
 
-
-        // return the number of days in month - https://edabit.com/challenge/TaWxNNHPHZmbMnBZx
+        ///<summary> Difficulty: very easy 
+        /// return the number of days in month - https://edabit.com/challenge/TaWxNNHPHZmbMnBZx 
+        ///</summary>  
         public static int Days(int month, int year)
         {
             return DateTime.DaysInMonth(year, month);
