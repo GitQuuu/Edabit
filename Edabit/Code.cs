@@ -35,24 +35,20 @@ namespace Edabit
         // Missing third angle - https://edabit.com/challenge/SZwKNfxC9JBsG99Gz
         public static string MissingAngle(int angle1, int angle2)
         {
-            angle1 = angle1;
-            angle2 = angle2;
-            int maxDegree = 180;            
             
-
-            string missingAngle = "";
+            int maxDegree = 180;            
 
             if ((maxDegree - angle1 - angle2) < 90)
             {
-                return missingAngle = "acute";
+                return  "acute";
             }
             else if ((maxDegree - angle1 - angle2) == 90)
             {
-                return missingAngle = "right";
+                return "right";
             }
             else 
             {
-                return missingAngle = "obtuse";
+                return "obtuse";
             }
 
         }
