@@ -31,6 +31,10 @@ namespace Edabit
         {
             Console.WriteLine("Create a function that takes an array of numbers. Return the largest number in the array.\n");
         }
+        public static void DisplaySmallestNumberInArray()
+        {
+            Console.WriteLine("Create a function that takes an array of numbers and returns the smallest number in the set.");
+        }
         public static void DisplayCheckStringForSpaces()
         {
             Console.WriteLine("Create a function that returns true if a string contains any spaces.");

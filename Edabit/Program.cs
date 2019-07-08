@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplaySmallestNumberInArray();
+            Console.WriteLine("\nFind the smallest number in array :" + Code.FindSmallestNum(new double[] {30,1,2,3,4,5}));
+
+            Task.PrintLine(150);
             Task.DisplaySliceOfPie();
             Console.WriteLine("\nSlices 11, Recipients 5, each 2 : " + Code.EqualSlices(11,5,2));
 

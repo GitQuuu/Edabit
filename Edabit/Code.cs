@@ -89,10 +89,29 @@ namespace Edabit
             return highestValue;
         }
 
-        ///<summary> very easy: 
-        /// Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
-        ///</summary>  
-        public static bool HasSpaces(string str)
+        ///<summary>
+        /// very easy:
+        /// Find the Smallest Number in an Array
+        ///</summary>
+        public static double FindSmallestNum(double[] arr)
+        {
+            double lowestNum = int.MaxValue;
+
+            for (int index = 0; index < arr.Length; index++)
+            {
+                if (lowestNum > arr[index])
+                {
+                    lowestNum = arr[index];
+                }
+            }
+            return lowestNum;
+        }
+    
+
+    ///<summary> very easy: 
+    /// Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
+    ///</summary>  
+    public static bool HasSpaces(string str)
         {
             return str.Contains(" ") ? true : false;
         }

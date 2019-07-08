@@ -7,9 +7,18 @@ namespace Edabit
     class workSheet
     {
 
-        public static bool EqualSlices(int total, int people, int each)
+        public static double FindSmallestNum(double[] arr)
         {
-            return people * each <= total ? true : false;    
+            double lowestNum = arr[0];
+
+            foreach  (double element in arr)
+            {
+                if (element < lowestNum)
+                {
+                    lowestNum = element;
+                }
+            }
+            return lowestNum;
         }
     }
 }
