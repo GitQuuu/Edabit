@@ -10,7 +10,7 @@ namespace Edabit
 
             Task.PrintLine(150);
             Task.DisplaySmallerStringNumber();
-            Console.WriteLine("\n100 , 200 :                         " + Code.SmallerNum("100","200"));
+            Console.WriteLine("\n100 , 200 :                       " + Code.SmallerNum("100","200"));
 
             Task.PrintLine(150);
             Task.DisplaySliceOfPie();
@@ -18,7 +18,7 @@ namespace Edabit
 
             Task.PrintLine(150);
             Task.DisplayReturnLastElement();
-            Console.WriteLine("\n\"Cat\", \"Dog\", \"Duck\" :    " +  Code.GetLastItem(new object[] { "Cat", "Dog", "Duck" }));
+            Console.WriteLine("\n\"Cat\", \"Dog\", \"Duck\" :      " +  Code.GetLastItem(new object[] { "Cat", "Dog", "Duck" }));
 
             Task.PrintLine(150);
             Task.DisplaySmallestNumberInArray();

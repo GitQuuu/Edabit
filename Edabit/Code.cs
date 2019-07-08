@@ -17,7 +17,7 @@ namespace Edabit
         {
             if (word.EndsWith("s"))
             {
-                Console.WriteLine("is plural");
+                Console.Write("is plural");
                 return true;
             }
             else
