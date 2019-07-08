@@ -9,8 +9,15 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayReturnLastElement();
+
+            Task.PrintLine(150);
+            Task.DisplayDaysInMonth();
+            Console.WriteLine("\nDays in month :           " + Code.Days(2,2018));
+
+            Task.PrintLine(150);
             Task.DisplayMissingThirdAngle();
-            Console.WriteLine("Missing angle is :        " + Code.MissingAngle(135, 11));
+            Console.WriteLine($"Missing angle is :        " + Code.MissingAngle(135, 11));
 
             Task.PrintLine(150);
             Task.DisplayLargestNumberInArray();

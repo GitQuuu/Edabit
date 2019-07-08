@@ -6,6 +6,15 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayReturnLastElement()
+        {
+            Console.WriteLine("Create a function that accepts an array and returns the last item in the array. The array can contain any of JavaScript's five primitive data types.");
+        }
+
+        public static void DisplayDaysInMonth()
+        {
+            Console.WriteLine("Create a function that takes the month and year (as integers) and returns the number of days in that month.");
+        }
         public static void DisplayMissingThirdAngle()
         {
             Console.WriteLine("Write a function that classifies the missing angle as either \"acute\", \"right\", or \"obtuse\" based on its degrees.");

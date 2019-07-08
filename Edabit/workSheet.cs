@@ -7,10 +7,9 @@ namespace Edabit
     class workSheet
     {
 
-        public static bool TimeForMilkAndCookies(int year, int month, int day)
+        public static int Days(int month, int year)
         {
-
-            return month == 12 && day == 24 ? true : false;
+           return DateTime.DaysInMonth(year, month);
         }
     }
 }

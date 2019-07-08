@@ -13,6 +13,14 @@ namespace Edabit
         ///<summary> Difficulty: very easy 
         /// Is the Word Singular or Plural? https://edabit.com/challenge/virMEraL59KKGQdDv  
         ///</summary>         
+
+        // return the number of days in month - https://edabit.com/challenge/TaWxNNHPHZmbMnBZx
+        public static int Days(int month, int year)
+        {
+            return DateTime.DaysInMonth(year, month);
+        }
+
+        // Check string for plural or not
         public static bool IsPlural(string word)
         {
             if (word.EndsWith("s"))
@@ -26,7 +34,6 @@ namespace Edabit
                 return false;
             }
         }
-
         public static bool IsPluralInDepth(string word)
         {   // does the same as above just a more in depth method
             return word.Substring(word.Length - 1, 1) == "s" ? true : false;
