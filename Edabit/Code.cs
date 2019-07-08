@@ -9,7 +9,7 @@ namespace Edabit
    
     class Code
     {
-
+        // very easy
         ///<summary> Difficulty: very easy 
         /// Is the Word Singular or Plural? https://edabit.com/challenge/virMEraL59KKGQdDv  
         ///</summary>         
@@ -62,15 +62,20 @@ namespace Edabit
 
         }
 
-        // Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
-        public static bool HasSpaces(string str)
+        ///<summary> Difficulty: very easy 
+        /// return the last element in array - https://edabit.com/challenge/oMFuP2d4Qr53HG588
+        ///</summary>  
+        public static object GetLastItem(object[] arr)
         {
-            return str.Contains(" ") ? true : false;
+
+            return arr[arr.Length - 1];
         }
 
-        ///<summary> Difficulty: easy
-        ///</summary>
-
+        /// <summary>
+        /// Difficulty: very easy - Find the Largest Number in an Array - https://edabit.com/challenge/4huAhWBE7f3asEFAz
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
         public static int FindLargestNum(int[] arr)
         {
             int highestValue = 0;
@@ -86,7 +91,18 @@ namespace Edabit
             return highestValue;
         }
 
-        // Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m
+        ///<summary> Difficulty: very easy 
+        /// Check String for spaces - https://edabit.com/challenge/RhjB3ckgMXiW5xdTB
+        ///</summary>  
+        public static bool HasSpaces(string str)
+        {
+            return str.Contains(" ") ? true : false;
+        }
+
+        //easy
+        ///<summary> Difficulty: easy
+        /// Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m
+        ///</summary>     
         public static string RemoveFirstLast(string str)
         {   // The reason for this to be correct and apparently not 0 and Length-1 is because quotation marks is part of the string array on index 0 and Length-1
             if (str.Length > 3)

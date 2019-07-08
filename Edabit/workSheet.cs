@@ -7,9 +7,10 @@ namespace Edabit
     class workSheet
     {
 
-        public static int Days(int month, int year)
+        public static object GetLastItem(object[] arr)
         {
-           return DateTime.DaysInMonth(year, month);
+
+            return arr[arr.Length - 1];
         }
     }
 }

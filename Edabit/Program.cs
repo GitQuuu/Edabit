@@ -10,6 +10,7 @@ namespace Edabit
 
             Task.PrintLine(150);
             Task.DisplayReturnLastElement();
+            Console.WriteLine("\n\"Cat\", \"Dog\", \"Duck\" :    " +  Code.GetLastItem(new object[] { "Cat", "Dog", "Duck" }));
 
             Task.PrintLine(150);
             Task.DisplayDaysInMonth();
