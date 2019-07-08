@@ -39,9 +39,9 @@ namespace Edabit
             return DateTime.DaysInMonth(year, month);
         }
 
-        // Check string for plural or not
-
-        // Missing third angle - https://edabit.com/challenge/SZwKNfxC9JBsG99Gz
+        ///<summary> Difficulty: very easy 
+        /// Missing third angle - https://edabit.com/challenge/SZwKNfxC9JBsG99Gz
+        ///</summary>
         public static string MissingAngle(int angle1, int angle2)
         {
             
