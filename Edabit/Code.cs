@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 
 namespace Edabit
@@ -185,13 +186,22 @@ namespace Edabit
             return str1.EndsWith(str2) ? true : false;
         }
 
-        //Medium
         ///<summary>
-        ///Difficulty: Medium
+        ///Easy:
+        ///Convert Number to Corresponding Month Name - https://edabit.com/challenge/uevxL5FNM77otyo9Z && https://stackoverflow.com/questions/6286868/convert-month-int-to-month-name 
         ///</summary>
+        public static string MonthName(int num)
+        {
+            return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(num);
+        }
 
-        // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
-        public static string FormatNum(int num)
+    //Medium
+    ///<summary>
+    ///Difficulty: Medium
+    ///</summary>
+
+    // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
+    public static string FormatNum(int num)
         {   // 0 represents the 1st variabel N0 represents number of digits
             return string.Format("{0:N0}", num);
         }

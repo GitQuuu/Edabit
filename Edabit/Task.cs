@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayMonthName()
+        {
+            Console.WriteLine("Create a function that takes a number (from 1 to 12) and return its corresponding month name as a string.Months");
+        }
         public static void DisplayStringComparison()
         {
             Console.WriteLine("Create a function that takes two strings and returns true if the first string ends with the second string; otherewise return false.");

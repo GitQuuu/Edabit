@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 
 namespace Edabit
 {
     class workSheet
     {
 
-        public static bool CheckEnding(string str1, string str2)
+        public static string MonthName(int num)
         {
-
-            return str1.EndsWith(str2) ? true : false;
+            return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(num);
         }
     }
 }

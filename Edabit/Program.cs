@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayMonthName();
+            Console.WriteLine("Display no. in month 5:                " + Code.MonthName(5));
+
+            Task.PrintLine(150);
             Task.DisplayGetWordCount();
             Console.WriteLine("\nCount how many words in this string: " + Code.CountWords("Count how many words in this string"));
 
