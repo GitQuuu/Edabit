@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayGetWordCount()
+        {
+            Console.WriteLine("Create a function that takes a string and returns the word count. The string will be a sentence.");
+        }
         public static void DisplaySmallerStringNumber()
         {
             Console.WriteLine("Create a function that returns the smaller number.");

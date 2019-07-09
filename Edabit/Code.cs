@@ -152,6 +152,25 @@ namespace Edabit
             return Convert.ToInt32(n1) < Convert.ToInt32(n2) ? n1 : n2;
         }
 
+        public static int CountWords(string str)
+        {
+            char[] whiteSpace = { ' ' };
+            int wordCount = 1;
+
+            foreach (char element in whiteSpace)
+            {
+                for (int index = 0; index < str.Length; index++)
+                {
+                    if (str[index] == element)
+                    {
+                        wordCount++;
+                    }
+                }
+            }
+
+            return wordCount;
+        }
+
         //Medium
         ///<summary>
         ///Difficulty: Medium

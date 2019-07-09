@@ -7,9 +7,23 @@ namespace Edabit
     class workSheet
     {
 
-        public static string smallerNum(string n1, string n2)
+        public static int CountWords(string str)
         {
-            return Convert.ToInt32(n1) < Convert.ToInt32(n2) ? n1 : n2;
+            char[] whiteSpace = {' ' };
+            int wordCount = 0;
+
+            foreach (char element in whiteSpace)
+            {
+                for (int index = 0; index < str.Length; index++)
+                {
+                    if (str[index] == element)
+                    {
+                        wordCount++;
+                    }
+                }
+            }
+
+            return wordCount;
         }
     }
 }
