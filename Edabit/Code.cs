@@ -152,6 +152,10 @@ namespace Edabit
             return Convert.ToInt32(n1) < Convert.ToInt32(n2) ? n1 : n2;
         }
 
+        /// <summary>
+        /// Easy:
+        /// Count number of words in string - https://edabit.com/challenge/DgQSXRDzh6QgfzDW2
+        /// </summary>
         public static int CountWords(string str)
         {
             char[] whiteSpace = { ' ' };
@@ -169,6 +173,16 @@ namespace Edabit
             }
 
             return wordCount;
+        }
+
+        ///<summary>
+        ///Easy:
+        /// Check if String Ending Matches Second String - https://edabit.com/challenge/7fpuK6rvSJz5amJiP
+        ///</summary>
+        public static bool CheckEnding(string str1, string str2)
+        {
+
+            return str1.EndsWith(str2) ? true : false;
         }
 
         //Medium

@@ -7,23 +7,10 @@ namespace Edabit
     class workSheet
     {
 
-        public static int CountWords(string str)
+        public static bool CheckEnding(string str1, string str2)
         {
-            char[] whiteSpace = {' ' };
-            int wordCount = 0;
 
-            foreach (char element in whiteSpace)
-            {
-                for (int index = 0; index < str.Length; index++)
-                {
-                    if (str[index] == element)
-                    {
-                        wordCount++;
-                    }
-                }
-            }
-
-            return wordCount;
+            return str1.EndsWith(str2) ? true : false;
         }
     }
 }

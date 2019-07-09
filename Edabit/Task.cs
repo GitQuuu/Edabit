@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayStringComparison()
+        {
+            Console.WriteLine("Create a function that takes two strings and returns true if the first string ends with the second string; otherewise return false.");
+        }
         public static void DisplayGetWordCount()
         {
             Console.WriteLine("Create a function that takes a string and returns the word count. The string will be a sentence.");
