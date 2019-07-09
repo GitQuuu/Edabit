@@ -130,7 +130,7 @@ namespace Edabit
         /// Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m
         ///</summary>     
         public static string RemoveFirstLast(string str)
-        {   // The reason for this to be correct and apparently not 0 and Length-1 is because quotation marks is part of the string array on index 0 and Length-1
+        {   // The reason for this to be correct and apparently not 0 and Length-1 is to remember startindex, is the beginning of the string we want to keep 
             if (str.Length > 3)
             {
                 str = str.Substring(1, str.Length - 2);
@@ -186,22 +186,48 @@ namespace Edabit
             return str1.EndsWith(str2) ? true : false;
         }
 
-        ///<summary>
-        ///Easy:
-        ///Convert Number to Corresponding Month Name - https://edabit.com/challenge/uevxL5FNM77otyo9Z && https://stackoverflow.com/questions/6286868/convert-month-int-to-month-name 
-        ///</summary>
+        /// <summary>
+        /// Easy:
+        /// Convert Number to Corresponding Month Name - https://edabit.com/challenge/uevxL5FNM77otyo9Z && https://stackoverflow.com/questions/6286868/convert-month-int-to-month-name 
+        /// </summary>
         public static string MonthName(int num)
         {
             return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(num);
         }
 
-    //Medium
-    ///<summary>
-    ///Difficulty: Medium
-    ///</summary>
 
-    // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
-    public static string FormatNum(int num)
+        //Medium
+        ///<summary>
+        ///Difficulty: Medium
+        ///</summary>
+        public static int[] RemoveSmallest(int[] values)
+        {
+            int lowestValue = values[0];
+            int index = 0;
+
+            foreach (int element in values)
+            {
+
+                if (lowestValue > element)
+                {
+                    lowestValue = element;
+                }
+            }
+
+            index = Array.IndexOf(values, lowestValue);
+
+            List<int> newArrayList = new List<int>(values);
+            newArrayList.RemoveAt(index);
+
+            
+          return values = newArrayList.ToArray();
+          
+            
+        }
+
+        // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
+
+        public static string FormatNum(int num)
         {   // 0 represents the 1st variabel N0 represents number of digits
             return string.Format("{0:N0}", num);
         }

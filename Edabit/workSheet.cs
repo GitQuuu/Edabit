@@ -8,9 +8,10 @@ namespace Edabit
     class workSheet
     {
 
-        public static string MonthName(int num)
+        public static int[] RemoveSmallest(int[] values)
         {
-            return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(num);
+            Array.Sort(values);
+            return values;
         }
     }
 }
