@@ -8,11 +8,10 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
-
-            Console.WriteLine(Code.RemoveSmallest(new int[] { 11, 3, 5 }).ToString());
+            Task.PrintLine(150);
+            Task.DisplayTheMuseumOfIncrediblyDullThings();
+            Console.WriteLine("remove lowest value in array : " + Code.PrintArray(Code.RemoveSmallest(new int[] { 11, 3, 5, 12, 423 }))); 
             
-          
-
             Task.PrintLine(150);
             Task.DisplayMonthName();
             Console.WriteLine("Display no. in month 5:                " + Code.MonthName(5));

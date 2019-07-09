@@ -198,7 +198,22 @@ namespace Edabit
 
         //Medium
         ///<summary>
-        ///Difficulty: Medium
+        /// Method to print array to string
+        /// </summary>
+        public static string PrintArray(int[] otherMethods)
+        {
+            string ArrayToString = "";
+            Console.WriteLine(ArrayToString);
+            foreach  (int element in otherMethods)
+            {
+                ArrayToString += element.ToString() + " ";
+            }
+            return $"{ArrayToString}";
+        }
+
+        ///<summary>
+        /// Medium:
+        /// The musem of incredibly dull things - https://edabit.com/challenge/dgHXtSrgyWbJ3cXvL - https://stackoverflow.com/questions/496896/how-to-delete-an-element-from-an-array-in-c-sharp
         ///</summary>
         public static int[] RemoveSmallest(int[] values)
         {

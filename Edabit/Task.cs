@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayTheMuseumOfIncrediblyDullThings()
+        {
+            Console.WriteLine("Create a function that takes an array of integers and removes the smallest value.");
+        }
         public static void DisplayMonthName()
         {
             Console.WriteLine("Create a function that takes a number (from 1 to 12) and return its corresponding month name as a string.Months");
