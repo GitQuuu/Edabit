@@ -217,27 +217,33 @@ namespace Edabit
         ///</summary>
         public static int[] RemoveSmallest(int[] values)
         {
-            int lowestValue = values[0];
-            int index = 0;
-
-            foreach (int element in values)
+            if (values.Length == 0)
             {
-
-                if (lowestValue > element)
-                {
-                    lowestValue = element;
-                }
+                return values;
             }
 
-            index = Array.IndexOf(values, lowestValue);
+            int valueFromArray = values[0]; 
+            int index = 0;
 
-            List<int> newArrayList = new List<int>(values);
-            newArrayList.RemoveAt(index);
+           
+            
+                foreach (int element in values)
+                {
 
+                    if (valueFromArray > element)
+                    {
+                        valueFromArray = element;
+                    }
+                }
+
+                index = Array.IndexOf(values, valueFromArray);
+
+                List<int> newArrayList = new List<int>(values);
+                newArrayList.RemoveAt(index);
+
+                return values = newArrayList.ToArray();
             
-          return values = newArrayList.ToArray();
-          
-            
+         
         }
 
         // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
