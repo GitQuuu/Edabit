@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayDoubleLetters();
+            Console.WriteLine("\nReturn true if the word have two consecutive identical letters and vice versa \"teest : " + Code.DoubleLetters("Teest")); 
+
+            Task.PrintLine(150);
             Task.DisplayTheMuseumOfIncrediblyDullThings();
             Console.WriteLine("remove lowest value in array { 11, 3, 5, 12, 423 } : " + Code.PrintArray(Code.RemoveSmallest(new int[] { 11, 3, 5, 12, 423 }))); 
             

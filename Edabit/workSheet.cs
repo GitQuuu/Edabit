@@ -8,10 +8,16 @@ namespace Edabit
     class workSheet
     {
 
-        public static int[] RemoveSmallest(int[] values)
+        public static bool DoubleLetters(string word)
         {
-            Array.Sort(values);
-            return values;
+            for (int index = 0; index < word.Length; index++)
+            {
+                if (word[index] == word[index + 1] && word[index] == word[index + 2])
+                {
+                    return true;
+                }         
+            }
+            return false;
         }
     }
 }

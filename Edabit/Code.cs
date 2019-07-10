@@ -126,6 +126,23 @@ namespace Edabit
         }
 
         //Easy
+
+        ///<summary>
+        /// Easy:
+        /// Create a function that takes a word and returns true if the word has two consecutive identical letters. - https://edabit.com/challenge/ugg9ZK7xY5vk5qJXr
+        /// </summary>
+        public static bool DoubleLetters(string word)
+        {
+            for (int index = 0; index < word.Length - 2; index++)
+            {
+                if (word[index] == word[index + 1])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         ///<summary>easy:
         /// Remove the First and Last Characters - https://edabit.com/challenge/hjFH2T4Gay7m9ka2m
         ///</summary>     

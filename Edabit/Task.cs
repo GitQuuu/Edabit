@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayDoubleLetters()
+        {
+            Console.WriteLine("Create a function that takes a word and returns true if the word has two consecutive identical letters.");
+        }
         public static void DisplayTheMuseumOfIncrediblyDullThings()
         {
             Console.WriteLine("Create a function that takes an array of integers and removes the smallest value.");
