@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayAddUp();
+            Console.WriteLine("\nAdd up the Numbers from a Single Number \"13\" :" + Code.AddUp(13));
+
+            Task.PrintLine(150);
             Task.DisplayDoubleLetters();
             Console.WriteLine("\nReturn true if the word have two consecutive identical letters and vice versa \"teest : " + Code.DoubleLetters("Teest")); 
 

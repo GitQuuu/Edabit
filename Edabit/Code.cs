@@ -127,6 +127,19 @@ namespace Edabit
 
         //Easy
 
+        public static int AddUp(int num)
+        {
+            int sum = 0;
+            for (int i = 1; i <= num; i++)
+            {
+                if (i < num)
+                {
+                    sum += +i;
+                }
+            }
+            return sum + num;
+        }
+
         ///<summary>
         /// Easy:
         /// Create a function that takes a word and returns true if the word has two consecutive identical letters. - https://edabit.com/challenge/ugg9ZK7xY5vk5qJXr
