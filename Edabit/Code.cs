@@ -138,6 +138,12 @@ namespace Edabit
             return Math.Round(sum / arr.Length, 2);
         }
 
+        /// <summary>
+        /// Easy
+        /// Difference of Max and Min Numbers in Array
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
         public static int differenceMaxMin(int[] arr)
         {
             int _varLowestValue = arr[0];
