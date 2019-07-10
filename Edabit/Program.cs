@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayDifferenceMaxMin();
+            Console.WriteLine("\n[10, 5, 6, 8, 15,-5} : " + Code.differenceMaxMin(new int[] { 10, 5, 6, 8, 15,-5 }));
+
+            Task.PrintLine(150);
             Task.DisplayAddUp();
             Console.WriteLine("\nAdd up the Numbers from a Single Number \"13\" :" + Code.AddUp(13));
 

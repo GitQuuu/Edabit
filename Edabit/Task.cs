@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayDifferenceMaxMin()
+        {
+            Console.WriteLine("Create a function that takes an array and returns the difference between the smallest and biggest numbers.");
+        }
         public static void DisplayAddUp()
         {
             Console.WriteLine("Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.");

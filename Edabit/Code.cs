@@ -77,11 +77,11 @@ namespace Edabit
         /// </summary>
         public static int FindLargestNum(int[] arr)
         {
-            int highestValue = 0;
+            int highestValue = arr[0];
 
             for (int index = 0; index < arr.Length; index++)
             {
-                if (arr[index] > highestValue)
+                if (highestValue < arr[index])
                 {
                     highestValue = arr[index];
                 }
@@ -126,7 +126,33 @@ namespace Edabit
         }
 
         //Easy
+        public static int differenceMaxMin(int[] arr)
+        {
+            int _varLowestValue = arr[0];
+            int _varHighestValue = arr[0];
 
+            foreach (int element in arr)
+            {
+                if (_varLowestValue > element)
+                {
+                    _varLowestValue = element;
+                }
+
+                if (_varHighestValue < element)
+                {
+                    _varHighestValue = element;
+                }
+            }
+
+
+
+            return _varHighestValue - _varLowestValue;
+        }
+
+        ///<summary>
+        /// Easy:
+        /// Add up all the numbers from 1 to the number you passed to the function
+        /// </summary>
         public static int AddUp(int num)
         {
             int sum = 0;

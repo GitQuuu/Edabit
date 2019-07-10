@@ -8,16 +8,20 @@ namespace Edabit
     class workSheet
     {
 
-        public static bool DoubleLetters(string word)
+        public static int differenceMaxMin(int[] arr)
         {
-            for (int index = 0; index < word.Length; index++)
+            int _varLowestValue = arr[0];
+            int _varHighestValue;
+
+            foreach (int element in arr)
             {
-                if (word[index] == word[index + 1] && word[index] == word[index + 2])
+                if (element > _varLowestValue)
                 {
-                    return true;
-                }         
+                    _varLowestValue = element;
+                }
             }
-            return false;
+
+            return _varLowestValue;
         }
     }
 }
