@@ -217,16 +217,11 @@ namespace Edabit
         ///</summary>
         public static int[] RemoveSmallest(int[] values)
         {
-            if (values.Length == 0)
+            if (values.Length > 0)
             {
-                return values;
-            }
+                int valueFromArray = values[0];
+                int index = 0;
 
-            int valueFromArray = values[0]; 
-            int index = 0;
-
-           
-            
                 foreach (int element in values)
                 {
 
@@ -235,15 +230,20 @@ namespace Edabit
                         valueFromArray = element;
                     }
                 }
-
-                index = Array.IndexOf(values, valueFromArray);
-
+                //    = Find the index number of elementValue
+                index = Array.IndexOf(values,valueFromArray);
+                // instantiating a int list = with values from the array
                 List<int> newArrayList = new List<int>(values);
+                // manipulating the list to remove the index that we got from line 235
                 newArrayList.RemoveAt(index);
 
                 return values = newArrayList.ToArray();
-            
-         
+            }
+            else
+            {
+                return values;
+            }
+
         }
 
         // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg

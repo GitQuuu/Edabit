@@ -10,7 +10,7 @@ namespace Edabit
 
             Task.PrintLine(150);
             Task.DisplayTheMuseumOfIncrediblyDullThings();
-            Console.WriteLine("remove lowest value in array { 11, 3, 5, 12, 423 } : " + Code.PrintArray(Code.RemoveSmallest(new int[] {}))); 
+            Console.WriteLine("remove lowest value in array { 11, 3, 5, 12, 423 } : " + Code.PrintArray(Code.RemoveSmallest(new int[] { 11, 3, 5, 12, 423 }))); 
             
             Task.PrintLine(150);
             Task.DisplayMonthName();
