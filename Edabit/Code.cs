@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using System.Linq;
 
 
 namespace Edabit
@@ -126,6 +127,17 @@ namespace Edabit
         }
 
         //Easy
+
+        /// <summary>
+        /// Easy
+        /// Calculate the Mean
+        /// </summary>
+        public static double Mean(int[] arr)
+        {
+            double sum = arr.Sum();
+            return Math.Round(sum / arr.Length, 2);
+        }
+
         public static int differenceMaxMin(int[] arr)
         {
             int _varLowestValue = arr[0];

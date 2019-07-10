@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayCalCulateMean();
+            Console.WriteLine("\nCalculate the mean of { 1,2,5,3,6} : " + Code.Mean(new int[] {1,2,5,3,6}));
+
+            Task.PrintLine(150);
             Task.DisplayDifferenceMaxMin();
             Console.WriteLine("\n[10, 5, 6, 8, 15,-5} : " + Code.differenceMaxMin(new int[] { 10, 5, 6, 8, 15,-5 }));
 

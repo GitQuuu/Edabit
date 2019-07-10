@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void DisplayCalCulateMean()
+        {
+            Console.WriteLine("Create a function that takes an array of numbers and returns the mean value.");
+        }
         public static void DisplayDifferenceMaxMin()
         {
             Console.WriteLine("Create a function that takes an array and returns the difference between the smallest and biggest numbers.");

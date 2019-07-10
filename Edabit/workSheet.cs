@@ -2,26 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
+using System.Linq;
 
 namespace Edabit
 {
     class workSheet
     {
 
-        public static int differenceMaxMin(int[] arr)
+        public static double Mean(int[] arr)
         {
-            int _varLowestValue = arr[0];
-            int _varHighestValue;
-
-            foreach (int element in arr)
-            {
-                if (element > _varLowestValue)
-                {
-                    _varLowestValue = element;
-                }
-            }
-
-            return _varLowestValue;
+            double sum = arr.Sum();
+            return Math.Round(sum / arr.Length, 2);
         }
     }
 }
