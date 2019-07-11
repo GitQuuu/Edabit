@@ -14,7 +14,7 @@ namespace Edabit
 
             Task.PrintLine(150);
             Task.DisplayCalCulateMean();
-            Console.WriteLine("\nCalculate the mean of { 1,2,5,3,6} : " + Code.Mean(new int[] {1,2,5,3,6}));
+            Console.WriteLine("\nCalculate the mean of { 1,2,5,3,6} :   " + Code.Mean(new int[] {1,2,5,3,6}));
 
             Task.PrintLine(150);
             Task.DisplayDifferenceMaxMin();
