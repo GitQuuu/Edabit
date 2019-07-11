@@ -6,13 +6,26 @@ using System.Linq;
 
 namespace Edabit
 {
-    class workSheet
+    class WorkSheet
     {
 
-        public static double Mean(int[] arr)
+        public static string FormatPhoneNumber(int[] numbers)
         {
-            double sum = arr.Sum();
-            return Math.Round(sum / arr.Length, 2);
+            string _varPhoneFormat = "";
+            if (numbers.Length > 0)
+            {
+                foreach (int element in numbers)
+                {
+                    _varPhoneFormat += element;
+                }             
+            }
+
+            _varPhoneFormat = _varPhoneFormat.Insert(0, "(");
+            _varPhoneFormat = _varPhoneFormat.Insert(4, ") ");
+            _varPhoneFormat = _varPhoneFormat.Insert(9, "-");
+
+            return _varPhoneFormat;
         }
+
     }
 }

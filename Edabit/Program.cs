@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayFormatPhoneNumber();
+            Console.WriteLine("\n{ 6, 0, 1, 7, 7, 5, 1, 6,9,2 } :       " + WorkSheet.FormatPhoneNumber(new int[] { 6, 0, 1, 7, 7, 5, 1, 6,9,2 })); 
+
+            Task.PrintLine(150);
             Task.DisplayCalCulateMean();
             Console.WriteLine("\nCalculate the mean of { 1,2,5,3,6} : " + Code.Mean(new int[] {1,2,5,3,6}));
 

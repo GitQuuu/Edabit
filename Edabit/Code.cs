@@ -128,6 +128,28 @@ namespace Edabit
 
         //Easy
 
+        ///<summary>
+        /// Easy: 
+        /// Phone Number Formatting
+        ///</summary>
+        public static string FormatPhoneNumber(int[] numbers)
+        {
+            string _varPhoneFormat = "";
+            if (numbers.Length > 0)
+            {
+                foreach (int element in numbers)
+                {
+                    _varPhoneFormat += element;
+                }
+            }
+
+            _varPhoneFormat = _varPhoneFormat.Insert(0, "(");
+            _varPhoneFormat = _varPhoneFormat.Insert(4, ") ");
+            _varPhoneFormat = _varPhoneFormat.Insert(9, "-");
+
+            return _varPhoneFormat;
+        }
+
         /// <summary>
         /// Easy
         /// Calculate the Mean
