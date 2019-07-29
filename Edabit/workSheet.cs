@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Linq;
 
@@ -9,22 +10,20 @@ namespace Edabit
     class WorkSheet
     {
 
-        public static string FormatPhoneNumber(int[] numbers)
+        public static bool IsValidPhoneNumber(string str)
         {
-            string _varPhoneFormat = "";
-            if (numbers.Length > 0)
+            char[] formats = {'(',')','-',' '};
+            
+            if (str.Length == 14 && formats[0] == str[0] && formats[1] == str[4] && formats[2] == str[9] && formats[3] == str[5])
             {
-                foreach (int element in numbers)
-                {
-                    _varPhoneFormat += element;
-                }             
+                return true;
             }
 
-            _varPhoneFormat = _varPhoneFormat.Insert(0, "(");
-            _varPhoneFormat = _varPhoneFormat.Insert(4, ") ");
-            _varPhoneFormat = _varPhoneFormat.Insert(9, "-");
 
-            return _varPhoneFormat;
+            else
+            {
+                return false;
+            }
         }
 
     }

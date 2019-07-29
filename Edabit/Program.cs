@@ -9,8 +9,12 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.DisplayPhoneNumberCorrectly();
+            Console.WriteLine("\n Phone no:9845641654                   " + Code.IsValidPhoneNumber("9845641654"));
+            
+            Task.PrintLine(150);
             Task.DisplayFormatPhoneNumber();
-            Console.WriteLine("\n{ 6, 0, 1, 7, 7, 5, 1, 6,9,2 } :       " + WorkSheet.FormatPhoneNumber(new int[] { 6, 0, 1, 7, 7, 5, 1, 6,9,2 })); 
+            Console.WriteLine("\n{ 6, 0, 1, 7, 7, 5, 1, 6,9,2 } :       " + Code.FormatPhoneNumber(new int[] { 6, 0, 1, 7, 7, 5, 1, 6,9,2 })); 
 
             Task.PrintLine(150);
             Task.DisplayCalCulateMean();
@@ -34,7 +38,7 @@ namespace Edabit
             
             Task.PrintLine(150);
             Task.DisplayMonthName();
-            Console.WriteLine("Display no. in month 5:                " + Code.MonthName(5));
+            Console.WriteLine("\nDisplay no. in month 5:                " + Code.MonthName(5));
 
             Task.PrintLine(150);
             Task.DisplayGetWordCount();
