@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void ValidZipCode()
+        {
+            Console.WriteLine("Zip codes consist of 5 consecutive digits. Given a string, write a function to determine whether the input is a valid zip code.");
+        }
         public static void DisplayPhoneNumberCorrectly()
         {
             Console.WriteLine("Create a function that accepts a string and returns true if it's in the format of a proper phone number and false if it's not. Assume any number between 0-9 (in the appropriate spots) will produce a valid phone number. This is what a valid phone number looks like: (123) 456-7890");

@@ -10,16 +10,20 @@ namespace Edabit
     class WorkSheet
     {
 
-        public static bool IsValidPhoneNumber(string str)
+        public static bool IsValid(string zip)
         {
-            char[] formats = {'(',')','-',' '};
-            
-            if (str.Length == 14 && formats[0] == str[0] && formats[1] == str[4] && formats[2] == str[9] && formats[3] == str[5])
+            if (zip.Length == 5)
             {
+                foreach (char element in zip)
+                {
+                    if (!char.IsDigit(element))
+                    {
+                        return false;
+                    }                  
+                }
                 return true;
+
             }
-
-
             else
             {
                 return false;

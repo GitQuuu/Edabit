@@ -9,8 +9,12 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.ValidZipCode();
+            Console.WriteLine("\n84516 :                                " + Code.IsValid("84516"));
+
+            Task.PrintLine(150);
             Task.DisplayPhoneNumberCorrectly();
-            Console.WriteLine("\n Phone no:9845641654                   " + Code.IsValidPhoneNumber("9845641654"));
+            Console.WriteLine("\nPhone no:9845641654 :                  " + Code.IsValidPhoneNumber("9845641654"));
             
             Task.PrintLine(150);
             Task.DisplayFormatPhoneNumber();

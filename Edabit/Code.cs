@@ -129,6 +129,29 @@ namespace Edabit
         //Easy
 
         ///<summary>
+        /// Easy: Valid zip Code
+        ///</summary>
+        public static bool IsValid(string zip)
+        {
+            if (zip.Length == 5)
+            {
+                foreach (char element in zip)
+                {
+                    if (!char.IsDigit(element))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        ///<summary>
         /// Easy: Is the phone Number formatted correctly
         ///</summary>
         public static bool IsValidPhoneNumber(string str)
