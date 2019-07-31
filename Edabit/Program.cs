@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.EliminateOddNumbers();
+            Console.WriteLine("\nRemove odds number {1,2,3,4,5,6} :     " + Code.PrintArray(Code.NoOdds(new int[] { 1, 2, 3, 4, 5, 6})));
+
+            Task.PrintLine(150);
             Task.ValidZipCode();
             Console.WriteLine("\n84516 :                                " + Code.IsValid("84516"));
 

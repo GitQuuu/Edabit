@@ -129,6 +129,30 @@ namespace Edabit
         //Easy
 
         ///<summary>
+        /// Easy: Eliminate odd numbers within an array - https://edabit.com/challenge/HkKNhhdfEGwxm9Fq6
+        /// </summary>
+        public static int[] NoOdds(int[] arr)
+        {
+            if (arr.Length > 0)
+            {
+                List<int> newArrayList = new List<int>(arr);
+
+                foreach (int element in arr)
+                {
+                    if (element % 2 != 0)
+                    {
+                        newArrayList.Remove(element);
+                    }
+                }
+                return arr = newArrayList.ToArray();
+            }
+            else
+            {
+                return arr;
+            }
+        }
+
+        ///<summary>
         /// Easy: Valid zip Code
         ///</summary>
         public static bool IsValid(string zip)
@@ -341,7 +365,7 @@ namespace Edabit
         public static string PrintArray(int[] otherMethods)
         {
             string ArrayToString = "";
-            Console.WriteLine(ArrayToString);
+            
             foreach  (int element in otherMethods)
             {
                 ArrayToString += element.ToString() + " ";

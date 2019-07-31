@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void EliminateOddNumbers()
+        {
+            Console.WriteLine("Create a function that takes an array of numbers and returns only the even values.");
+        }
         public static void ValidZipCode()
         {
             Console.WriteLine("Zip codes consist of 5 consecutive digits. Given a string, write a function to determine whether the input is a valid zip code.");

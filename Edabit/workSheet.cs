@@ -9,26 +9,25 @@ namespace Edabit
 {
     class WorkSheet
     {
-
-        public static bool IsValid(string zip)
+        public static int[] NoOdds(int[] arr)
         {
-            if (zip.Length == 5)
+            if (arr.Length > 0)
             {
-                foreach (char element in zip)
-                {
-                    if (!char.IsDigit(element))
-                    {
-                        return false;
-                    }                  
-                }
-                return true;
+                List<int> newArrayList = new List<int>(arr);
 
+                foreach (int element in arr)
+                {
+                    if (element % 2 != 1)
+                    {
+                        newArrayList.Remove(element);
+                    }
+                }
+                return arr = newArrayList.ToArray();
             }
             else
             {
-                return false;
+                return arr;
             }
         }
-
     }
 }
