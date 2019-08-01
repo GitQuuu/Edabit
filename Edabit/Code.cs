@@ -390,7 +390,9 @@ namespace Edabit
             }
             return $"{ArrayToString}";
         }
-
+        /// <summary>
+        /// same as above just for arguments of string[] instead of int[]
+        /// </summary>    
         public static string PrintStringArray(string[] otherMethods)
         {
             string ArrayToString = "";
@@ -438,20 +440,25 @@ namespace Edabit
 
         }
 
-        // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
-
+        ///<summary>
+        ///Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
+        ///</summary> 
         public static string FormatNum(int num)
         {   // 0 represents the 1st variabel N0 represents number of digits
             return string.Format("{0:N0}", num);
         }
 
-        // Remove All Special Characters from a String - https://edabit.com/challenge/SfZx7qzXheYQxtQbF
+        ///<summary>
+        /// Medium : Remove All Special Characters from a String - https://edabit.com/challenge/SfZx7qzXheYQxtQbF
+        ///</summary> 
         public static string RemoveSpecialCharacters(string str)
         {   // put desired value for which you dont want to replace in the brackets
             return Regex.Replace(str, "[^0-9A-Za-z _-]", "");
         }
 
-        // Basic E-Mail Validation - https://edabit.com/challenge/egy6LWExtnR6JkwBg
+        ///<summary>
+        ///Basic E-Mail Validation - https://edabit.com/challenge/egy6LWExtnR6JkwBg
+        ///</summary> 
         public static bool ValidateEmail(string str)
         {
             char[] symbols = { '@', '.' };
