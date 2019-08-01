@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void ReturnFourLetterString()
+        {
+            Console.WriteLine("Create a function that takes an array of strings. Return all words in the array that are exactly four letters.");
+        }
         public static void EliminateOddNumbers()
         {
             Console.WriteLine("Create a function that takes an array of numbers and returns only the even values.");

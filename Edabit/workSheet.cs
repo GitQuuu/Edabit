@@ -9,25 +9,19 @@ namespace Edabit
 {
     class WorkSheet
     {
-        public static int[] NoOdds(int[] arr)
+        public static string[] IsFourLetters(string[] arr)
         {
-            if (arr.Length > 0)
-            {
-                List<int> newArrayList = new List<int>(arr);
+            List<string> returnFourLetters = new List<string>(arr);
 
-                foreach (int element in arr)
-                {
-                    if (element % 2 != 1)
-                    {
-                        newArrayList.Remove(element);
-                    }
-                }
-                return arr = newArrayList.ToArray();
-            }
-            else
+            foreach (string element in arr)
             {
-                return arr;
+                if (element.Length == 4)
+                {
+                    returnFourLetters.Add(element);
+                }
             }
+
+            return returnFourLetters.ToArray();
         }
     }
 }

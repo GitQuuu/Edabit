@@ -9,8 +9,12 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.ReturnFourLetterString();
+            Console.WriteLine("\n{\"Nicoline\",\"Clara\",\"Luca\",\"Quan\"} :  " + Code.PrintStringArray(Code.IsFourLetters(new string[] { "Nicoline", "Clara", "Luca", "Quan" })));
+
+            Task.PrintLine(150);
             Task.EliminateOddNumbers();
-            Console.WriteLine("\nRemove odds number {1,2,3,4,5,6} :     " + Code.PrintArray(Code.NoOdds(new int[] { 1, 2, 3, 4, 5, 6})));
+            Console.WriteLine("\nRemove odds number {1,2,3,4,5,6} :     " + Code.PrintIntArray(Code.NoOdds(new int[] { 1, 2, 3, 4, 5, 6})));
 
             Task.PrintLine(150);
             Task.ValidZipCode();
@@ -42,7 +46,7 @@ namespace Edabit
 
             Task.PrintLine(150);
             Task.DisplayTheMuseumOfIncrediblyDullThings();
-            Console.WriteLine("remove lowest value in array { 11, 3, 5, 12, 423 } : " + Code.PrintArray(Code.RemoveSmallest(new int[] { 11, 3, 5, 12, 423 }))); 
+            Console.WriteLine("remove lowest value in array { 11, 3, 5, 12, 423 } : " + Code.PrintIntArray(Code.RemoveSmallest(new int[] { 11, 3, 5, 12, 423 }))); 
             
             Task.PrintLine(150);
             Task.DisplayMonthName();

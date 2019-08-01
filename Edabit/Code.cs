@@ -129,6 +129,24 @@ namespace Edabit
         //Easy
 
         ///<summary>
+        /// Easy: return the four letter strings - https://edabit.com/challenge/W4x4o2M7ny6Cqkfhn
+        /// </summary>
+        public static string[] IsFourLetters(string[] arr)
+        {
+            List<string> returnFourLetters = new List<string>(arr);
+
+            foreach (string element in arr)
+            {
+                if (element.Length != 4)
+                {
+                    returnFourLetters.Remove(element);
+                }
+            }
+
+            return returnFourLetters.ToArray(); 
+        }
+
+        ///<summary>
         /// Easy: Eliminate odd numbers within an array - https://edabit.com/challenge/HkKNhhdfEGwxm9Fq6
         /// </summary>
         public static int[] NoOdds(int[] arr)
@@ -362,7 +380,7 @@ namespace Edabit
         ///<summary>
         /// Method to print array to string
         /// </summary>
-        public static string PrintArray(int[] otherMethods)
+        public static string PrintIntArray(int[] otherMethods)
         {
             string ArrayToString = "";
             
@@ -370,6 +388,18 @@ namespace Edabit
             {
                 ArrayToString += element.ToString() + " ";
             }
+            return $"{ArrayToString}";
+        }
+
+        public static string PrintStringArray(string[] otherMethods)
+        {
+            string ArrayToString = "";
+
+            foreach (string element in otherMethods)
+            {
+                ArrayToString += element.ToString() + " ";
+            }
+
             return $"{ArrayToString}";
         }
 
