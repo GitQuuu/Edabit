@@ -9,6 +9,10 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.NoYelling();
+            Console.WriteLine("No!!!!! Yelling!!!                                   " + Code.NoYelling("No!!!!! Yelling!!!"));
+
+            Task.PrintLine(150);
             Task.ReturnFourLetterString();
             Console.WriteLine("\n{\"Nicoline\",\"Clara\",\"Luca\",\"Quan\"} :       " + Code.PrintStringArray(Code.IsFourLetters(new string[] { "Nicoline", "Clara", "Luca", "Quan" })));
 
