@@ -11,24 +11,30 @@ namespace Edabit
     {
         public static string NoYelling(string phrase)
         {
-            if (phrase.Contains('!'))
+            char[] symbols = { '!', '?' };
+            
+            StringBuilder sb = new StringBuilder();
+            if (phrase.Contains('!') || phrase.Contains('?'))
             {
-                for (int index = 0; index < phrase.Length; index++)
+                string[] words = phrase.Split(" ");
+
+                for (int i = 0; i < words.Length; i++)
                 {
-                    if (phrase[index] == '!')
-                    {
-                        return phrase.Remove(0,phrase.Length);
-                    }
+                    words[i] = words[i].TrimEnd(symbols);
+                    if (i < words.Length-1)
+                        sb.Append(words[i] + " ");
                     else
                     {
-                        return phrase;
-                    }
+                        sb.Append(words[i]);
+                        if (phrase.EndsWith('!'))
+                            sb.Append('!');
+                        else if (phrase.EndsWith('?'))
+                            sb.Append('?');
+                    }            
                 }
+                
             }
-
-
-            return phrase;
-            
-        }
+            return sb.ToString();
+        }           
     }
 }

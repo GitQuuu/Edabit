@@ -385,18 +385,30 @@ namespace Edabit
         /// <returns>A string without consecutive exclamation or question marks</returns>
         public static string NoYelling(string phrase)
         {
-            if (phrase.EndsWith("!"))
+            char[] symbols = { '!', '?' };
+
+            StringBuilder sb = new StringBuilder();
+            if (phrase.Contains('!') || phrase.Contains('?'))
             {
-                return phrase.TrimEnd(new char[] { '!' }) + '!';
+                string[] words = phrase.Split(" ");
+
+                for (int i = 0; i < words.Length; i++)
+                {
+                    words[i] = words[i].TrimEnd(symbols);
+                    if (i < words.Length-1)
+                        sb.Append(words[i] + " ");
+                    else
+                    {
+                        sb.Append(words[i]);
+                        if (phrase.EndsWith('!'))
+                            sb.Append('!');
+                        else if (phrase.EndsWith('?'))
+                            sb.Append('?');
+                    }
+                }
+
             }
-            else if (phrase.EndsWith("?"))
-            {
-                return phrase.TrimEnd(new char[] { '?' }) + '?';
-            }
-            else
-            {
-                return phrase;
-            }
+            return sb.ToString();
         }
 
         ///<summary>
