@@ -368,7 +368,7 @@ namespace Edabit
 
         /// <summary>
         /// Easy:
-        /// Convert Number to Corresponding Month Name - https://edabit.com/challenge/uevxL5FNM77otyo9Z && https://stackoverflow.com/questions/6286868/convert-month-int-to-month-name 
+        /// Convert Number to Corresponding Month Name - https://edabit.com/challenge/uevxL5FNM77otyo9Z - https://stackoverflow.com/questions/6286868/convert-month-int-to-month-name 
         /// </summary>
         public static string MonthName(int num)
         {
