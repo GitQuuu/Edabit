@@ -6,6 +6,22 @@ namespace Edabit
 {
     class Task
     {
+        public static void ReturnFourLetterString()
+        {
+            Console.WriteLine("Create a function that takes an array of strings. Return all words in the array that are exactly four letters.");
+        }
+        public static void EliminateOddNumbers()
+        {
+            Console.WriteLine("Create a function that takes an array of numbers and returns only the even values.");
+        }
+        public static void ValidZipCode()
+        {
+            Console.WriteLine("Zip codes consist of 5 consecutive digits. Given a string, write a function to determine whether the input is a valid zip code.");
+        }
+        public static void DisplayPhoneNumberCorrectly()
+        {
+            Console.WriteLine("Create a function that accepts a string and returns true if it's in the format of a proper phone number and false if it's not. Assume any number between 0-9 (in the appropriate spots) will produce a valid phone number. This is what a valid phone number looks like: (123) 456-7890");
+        }
         public static void DisplayFormatPhoneNumber()
         {
             Console.WriteLine("Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).");

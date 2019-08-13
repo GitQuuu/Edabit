@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Linq;
 
@@ -8,24 +9,19 @@ namespace Edabit
 {
     class WorkSheet
     {
-
-        public static string FormatPhoneNumber(int[] numbers)
+        public static string[] IsFourLetters(string[] arr)
         {
-            string _varPhoneFormat = "";
-            if (numbers.Length > 0)
+            List<string> returnFourLetters = new List<string>(arr);
+
+            foreach (string element in arr)
             {
-                foreach (int element in numbers)
+                if (element.Length == 4)
                 {
-                    _varPhoneFormat += element;
-                }             
+                    returnFourLetters.Add(element);
+                }
             }
 
-            _varPhoneFormat = _varPhoneFormat.Insert(0, "(");
-            _varPhoneFormat = _varPhoneFormat.Insert(4, ") ");
-            _varPhoneFormat = _varPhoneFormat.Insert(9, "-");
-
-            return _varPhoneFormat;
+            return returnFourLetters.ToArray();
         }
-
     }
 }

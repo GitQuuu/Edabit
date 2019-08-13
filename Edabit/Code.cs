@@ -129,6 +129,90 @@ namespace Edabit
         //Easy
 
         ///<summary>
+        /// Easy: return the four letter strings - https://edabit.com/challenge/W4x4o2M7ny6Cqkfhn
+        /// </summary>
+        public static string[] IsFourLetters(string[] arr)
+        {
+            List<string> returnFourLetters = new List<string>(arr);
+
+            foreach (string element in arr)
+            {
+                if (element.Length != 4)
+                {
+                    returnFourLetters.Remove(element);
+                }
+            }
+
+            return returnFourLetters.ToArray(); 
+        }
+
+        ///<summary>
+        /// Easy: Eliminate odd numbers within an array - https://edabit.com/challenge/HkKNhhdfEGwxm9Fq6
+        /// </summary>
+        public static int[] NoOdds(int[] arr)
+        {
+            if (arr.Length > 0)
+            {
+                List<int> newArrayList = new List<int>(arr);
+
+                foreach (int element in arr)
+                {
+                    if (element % 2 != 0)
+                    {
+                        newArrayList.Remove(element);
+                    }
+                }
+                return arr = newArrayList.ToArray();
+            }
+            else
+            {
+                return arr;
+            }
+        }
+
+        ///<summary>
+        /// Easy: Valid zip Code
+        ///</summary>
+        public static bool IsValid(string zip)
+        {
+            if (zip.Length == 5)
+            {
+                foreach (char element in zip)
+                {
+                    if (!char.IsDigit(element))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        ///<summary>
+        /// Easy: Is the phone Number formatted correctly
+        ///</summary>
+        public static bool IsValidPhoneNumber(string str)
+        {
+            char[] formats = { '(', ')', '-', ' ' };
+
+            if (str.Length == 14 && formats[0] == str[0] && formats[1] == str[4] && formats[2] == str[9] && formats[3] == str[5])
+            {
+                return true;
+            }
+
+
+            else
+            {
+                return false;
+            }
+        }
+
+        ///<summary>
         /// Easy: 
         /// Phone Number Formatting
         ///</summary>
@@ -296,14 +380,28 @@ namespace Edabit
         ///<summary>
         /// Method to print array to string
         /// </summary>
-        public static string PrintArray(int[] otherMethods)
+        public static string PrintIntArray(int[] otherMethods)
         {
             string ArrayToString = "";
-            Console.WriteLine(ArrayToString);
+            
             foreach  (int element in otherMethods)
             {
                 ArrayToString += element.ToString() + " ";
             }
+            return $"{ArrayToString}";
+        }
+        /// <summary>
+        /// same as above just for arguments of string[] instead of int[]
+        /// </summary>    
+        public static string PrintStringArray(string[] otherMethods)
+        {
+            string ArrayToString = "";
+
+            foreach (string element in otherMethods)
+            {
+                ArrayToString += element.ToString() + " ";
+            }
+
             return $"{ArrayToString}";
         }
 
@@ -342,20 +440,25 @@ namespace Edabit
 
         }
 
-        // Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
-
+        ///<summary>
+        ///Format Number with Comma(s) Separating Thousands - https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
+        ///</summary> 
         public static string FormatNum(int num)
         {   // 0 represents the 1st variabel N0 represents number of digits
             return string.Format("{0:N0}", num);
         }
 
-        // Remove All Special Characters from a String - https://edabit.com/challenge/SfZx7qzXheYQxtQbF
+        ///<summary>
+        /// Medium : Remove All Special Characters from a String - https://edabit.com/challenge/SfZx7qzXheYQxtQbF
+        ///</summary> 
         public static string RemoveSpecialCharacters(string str)
         {   // put desired value for which you dont want to replace in the brackets
             return Regex.Replace(str, "[^0-9A-Za-z _-]", "");
         }
 
-        // Basic E-Mail Validation - https://edabit.com/challenge/egy6LWExtnR6JkwBg
+        ///<summary>
+        ///Basic E-Mail Validation - https://edabit.com/challenge/egy6LWExtnR6JkwBg
+        ///</summary> 
         public static bool ValidateEmail(string str)
         {
             char[] symbols = { '@', '.' };
