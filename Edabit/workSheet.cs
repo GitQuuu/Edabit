@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Edabit
 {
-    class WorkSheet
+    class Worksheet
     {
         public static string NoYelling(string phrase)
         {
