@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void NoYelling()
+        {
+            Console.WriteLine("Create a function that takes an character and string as arguments and returns the number of times the character is found in the string.");
+        }
         public static void ReturnFourLetterString()
         {
             Console.WriteLine("Create a function that takes an array of strings. Return all words in the array that are exactly four letters.");

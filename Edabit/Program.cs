@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Edabit
 {
@@ -7,6 +8,10 @@ namespace Edabit
         static void Main(string[] args)
         {
             Console.WriteLine("A run through edabit challenges\n");
+
+            Task.PrintLine(150);
+            Task.NoYelling();
+            Console.WriteLine("No!!!!! Yelling!!!                                   " + Code.NoYelling("No??? Yelling??? Emil??"));
 
             Task.PrintLine(150);
             Task.ReturnFourLetterString();

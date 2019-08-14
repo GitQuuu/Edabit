@@ -377,6 +377,40 @@ namespace Edabit
 
 
         //Medium
+
+        /// <summary>
+        /// Medium: Remove all consecutive exclamation or question marks
+        /// </summary>
+        /// <param name="phrase">Input string to analyze</param>
+        /// <returns>A string without consecutive exclamation or question marks</returns>
+        public static string NoYelling(string phrase)
+        {
+            char[] symbols = { '!', '?' };
+
+            StringBuilder sb = new StringBuilder();
+            if (phrase.Contains('!') || phrase.Contains('?'))
+            {
+                string[] words = phrase.Split(" ");
+
+                for (int i = 0; i < words.Length; i++)
+                {
+                    words[i] = words[i].TrimEnd(symbols);
+                    if (i < words.Length-1)
+                        sb.Append(words[i] + " ");
+                    else
+                    {
+                        sb.Append(words[i]);
+                        if (phrase.EndsWith('!'))
+                            sb.Append('!');
+                        else if (phrase.EndsWith('?'))
+                            sb.Append('?');
+                    }
+                }
+
+            }
+            return sb.ToString();
+        }
+
         ///<summary>
         /// Method to print array to string
         /// </summary>

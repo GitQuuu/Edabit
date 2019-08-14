@@ -9,19 +9,32 @@ namespace Edabit
 {
     class WorkSheet
     {
-        public static string[] IsFourLetters(string[] arr)
+        public static string NoYelling(string phrase)
         {
-            List<string> returnFourLetters = new List<string>(arr);
-
-            foreach (string element in arr)
+            char[] symbols = { '!', '?' };
+            
+            StringBuilder sb = new StringBuilder();
+            if (phrase.Contains('!') || phrase.Contains('?'))
             {
-                if (element.Length == 4)
-                {
-                    returnFourLetters.Add(element);
-                }
-            }
+                string[] words = phrase.Split(" ");
 
-            return returnFourLetters.ToArray();
-        }
+                for (int i = 0; i < words.Length; i++)
+                {
+                    words[i] = words[i].TrimEnd(symbols);
+                    if (i < words.Length-1)
+                        sb.Append(words[i] + " ");
+                    else
+                    {
+                        sb.Append(words[i]);
+                        if (phrase.EndsWith('!'))
+                            sb.Append('!');
+                        else if (phrase.EndsWith('?'))
+                            sb.Append('?');
+                    }            
+                }
+                
+            }
+            return sb.ToString();
+        }           
     }
 }
