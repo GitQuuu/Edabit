@@ -27,14 +27,14 @@ namespace Edabit
                     {
                         sb.Append(words[i]);
                         if (phrase.EndsWith('!'))
-                            sb.Append('!');
+                           return sb.ToString() +"!";
                         else if (phrase.EndsWith('?'))
-                            sb.Append('?');
+                            return sb.ToString() + "?";
                     }            
                 }
                 
             }
-            return sb.ToString();
+            return phrase;
         }           
     }
 }

@@ -395,20 +395,20 @@ namespace Edabit
                 for (int i = 0; i < words.Length; i++)
                 {
                     words[i] = words[i].TrimEnd(symbols);
-                    if (i < words.Length-1)
+                    if (i < words.Length - 1)
                         sb.Append(words[i] + " ");
                     else
                     {
                         sb.Append(words[i]);
                         if (phrase.EndsWith('!'))
-                            sb.Append('!');
+                            return sb.ToString() + "!";
                         else if (phrase.EndsWith('?'))
-                            sb.Append('?');
+                            return sb.ToString() + "?";
                     }
                 }
 
             }
-            return sb.ToString();
+            return phrase;
         }
 
         ///<summary>
