@@ -9,9 +9,10 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
+
             Task.PrintLine(150);
             Task.NoYelling();
-            Console.WriteLine("No!!!!! Yelling!!!                                   " + Medium.NoYelling("No??? Yelling??? Emil??"));
+            Console.WriteLine("\nNo!!!!! Yelling!!!                                   " + Medium.NoYelling("No??? Yelling??? Emil??"));
 
             Task.PrintLine(150);
             Task.ReturnFourLetterString();
