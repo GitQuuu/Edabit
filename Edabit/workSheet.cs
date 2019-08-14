@@ -9,32 +9,24 @@ namespace Edabit
 {
     class Worksheet
     {
-        public static string NoYelling(string phrase)
+        //Create a function that takes a string as its argument and returns the string in reversed order.
+        public static string Reverse(string str)
         {
-            char[] symbols = { '!', '?' };
-            
-            StringBuilder sb = new StringBuilder();
-            if (phrase.Contains('!') || phrase.Contains('?'))
-            {
-                string[] words = phrase.Split(" ");
+           
+           char[] stringArray;
+           string arrayToString = "";
 
-                for (int i = 0; i < words.Length; i++)
-                {
-                    words[i] = words[i].TrimEnd(symbols);
-                    if (i < words.Length-1)
-                        sb.Append(words[i] + " ");
-                    else
-                    {
-                        sb.Append(words[i]);
-                        if (phrase.EndsWith('!'))
-                           return sb.ToString() +"!";
-                        else if (phrase.EndsWith('?'))
-                            return sb.ToString() + "?";
-                    }            
-                }
-                
+           stringArray = str.ToCharArray();
+
+           Array.Reverse(stringArray);
+
+            foreach (char element in stringArray)
+            {
+                arrayToString += element.ToString();
             }
-            return phrase;
-        }           
+
+            return $"{arrayToString}";
+            
+        }
     }
 }

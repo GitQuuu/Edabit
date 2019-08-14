@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void Reverse()
+        {
+            Console.WriteLine("Create a function that takes a string as its argument and returns the string in reversed order.");
+        }
         public static void NoYelling()
         {
             Console.WriteLine("Create a function that takes an character and string as arguments and returns the number of times the character is found in the string.");

@@ -10,6 +10,30 @@ namespace Edabit
     class Medium
     {
         /// <summary>
+        /// Take a string as arguments and reverse the order - https://edabit.com/challenge/pdHrsZMdhwYNEX3wY
+        /// </summary>
+        /// <param name="str">string to reverse</param>
+        /// <returns>string</returns>
+        public static string Reverse(string str)
+        {
+
+            char[] stringArray;
+            string arrayToString = "";
+
+            stringArray = str.ToCharArray();
+
+            Array.Reverse(stringArray);
+
+            foreach (char element in stringArray)
+            {
+                arrayToString += element.ToString();
+            }
+
+            return $"{arrayToString}";
+
+        }
+
+        /// <summary>
         /// Medium: Remove all consecutive exclamation or question marks
         /// </summary>
         /// <param name="phrase">Input string to analyze</param>
@@ -42,10 +66,12 @@ namespace Edabit
             return phrase;
         }
 
-        ///<summary>
-        /// Method to print array to string
+        /// <summary>
+        /// Method 3 overloading to print arrays
         /// </summary>
-        public static string PrintIntArray(int[] otherMethods)
+        /// <param name="otherMethods">Input other methods as parameter</param>
+        /// <returns>string</returns>
+        public static string PrintArray(int[] otherMethods)
         {
             string ArrayToString = "";
 
@@ -55,10 +81,13 @@ namespace Edabit
             }
             return $"{ArrayToString}";
         }
+        
         /// <summary>
-        /// same as above just for arguments of string[] instead of int[]
-        /// </summary>    
-        public static string PrintStringArray(string[] otherMethods)
+        /// Method 3 overloading to print arrays
+        /// </summary>
+        /// <param name="otherMethods">Input other methods as parameter</param>
+        /// <returns>string</returns>
+        public static string PrintArray(string[] otherMethods)
         {
             string ArrayToString = "";
 
@@ -69,6 +98,24 @@ namespace Edabit
 
             return $"{ArrayToString}";
         }
+
+        /// <summary>
+        /// Method 3 overloading to print arrays
+        /// </summary>
+        /// <param name="otherMethods">Input other methods as parameter</param>
+        /// <returns>string</returns>
+        public static string PrintArray(char[] otherMethods)
+        {
+            string ArrayToString = "";
+
+            foreach (char element in otherMethods)
+            {
+                ArrayToString += element.ToString() + " ";
+            }
+
+            return $"{ArrayToString}";
+        }
+
 
         ///<summary>
         /// Medium:
