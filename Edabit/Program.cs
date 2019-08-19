@@ -19,7 +19,7 @@ namespace Edabit
 
             Task.PrintLine(150);
             Task.NoYelling();
-            Console.WriteLine("\nNo!!!!! Yelling!!!                                 " + Medium.NoYelling("No??? Yelling??? Emil??"));
+            Console.WriteLine("\nNo??? ??Yelling??? Emil??                           " + Medium.NoYelling("No??? ??Yelling??? Emil??"));
 
             Task.PrintLine(150);
             Task.ReturnFourLetterString();

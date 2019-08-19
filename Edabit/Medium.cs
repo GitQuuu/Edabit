@@ -83,13 +83,14 @@ namespace Edabit
             char[] symbols = { '!', '?' };
 
             StringBuilder sb = new StringBuilder();
+
             if (phrase.Contains('!') || phrase.Contains('?'))
             {
                 string[] words = phrase.Split(" ");
 
                 for (int i = 0; i < words.Length; i++)
                 {
-                    words[i] = words[i].TrimEnd(symbols);
+                    words[i] = words[i].Trim(symbols);
                     if (i < words.Length - 1)
                         sb.Append(words[i] + " ");
                     else
