@@ -14,7 +14,7 @@ namespace Edabit
         {
             string[] wordsArray;
             string result = "";
-            
+
             wordsArray = str.Split(" ");
 
             if (str.Length < 0)
@@ -42,9 +42,8 @@ namespace Edabit
             }
 
             return result.TrimEnd(' ');
-            
-        }
 
+        }
     }
     
 }

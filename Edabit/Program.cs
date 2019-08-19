@@ -11,7 +11,7 @@ namespace Edabit
 
             Task.PrintLine(150);
             Task.MakeTitle();
-            Console.WriteLine("\nMake each words first letter uppercase                    " + Medium.MakeTitle("Make each words first letter uppercase"));
+            Console.WriteLine("\nMake each words first letter uppercase             " + Medium.MakeTitle("Make each words first letter uppercase"));
 
             Task.PrintLine(150);
             Task.Reverse();

@@ -21,7 +21,7 @@ namespace Edabit
 
             wordsArray = str.Split(" ");
 
-            if (str.Length < 0)
+            if (str.Length == 0)
             {
                 return "No input";
             }
