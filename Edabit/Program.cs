@@ -10,8 +10,12 @@ namespace Edabit
             Console.WriteLine("A run through edabit challenges\n");
 
             Task.PrintLine(150);
+            Task.MakeTitle();
+            Console.WriteLine("\nMake each words first letter uppercase                    " + Medium.MakeTitle("Make each words first letter uppercase"));
+
+            Task.PrintLine(150);
             Task.Reverse();
-            Console.WriteLine("\nHej jeg hedder                                     " + Worksheet.Reverse("Hej jeg hedder"));
+            Console.WriteLine("\nHej jeg hedder                                     " + Medium.Reverse("Hej jeg hedder"));
 
             Task.PrintLine(150);
             Task.NoYelling();

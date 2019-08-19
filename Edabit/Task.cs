@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void MakeTitle()
+        {
+            Console.WriteLine("Create a function that takes a string as an argument and converts the first character of each word to uppercase. Return the newly formatted string.");
+        }
         public static void Reverse()
         {
             Console.WriteLine("Create a function that takes a string as its argument and returns the string in reversed order.");
@@ -128,6 +132,10 @@ namespace Edabit
             
         }
 
+        /// <summary>
+        /// Print * to Console
+        /// </summary>
+        /// <param name="length">Input desired * with int</param>
         public static void PrintLine(int length)
         {
             Console.WriteLine(new string('#',length));

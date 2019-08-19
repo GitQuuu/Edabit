@@ -9,24 +9,42 @@ namespace Edabit
 {
     class Worksheet
     {
-        //Create a function that takes a string as its argument and returns the string in reversed order.
-        public static string Reverse(string str)
+        //Create a function that takes a string as an argument and converts the first character of each word to uppercase. Return the newly formatted string.
+        public static string MakeTitle(string str)
         {
-           
-           char[] stringArray;
-           string arrayToString = "";
+            string[] wordsArray;
+            string result = "";
+            
+            wordsArray = str.Split(" ");
 
-           stringArray = str.ToCharArray();
-
-           Array.Reverse(stringArray);
-
-            foreach (char element in stringArray)
+            if (str.Length < 0)
             {
-                arrayToString += element.ToString();
+                return "No input";
+            }
+            else
+            {
+                foreach (string word in wordsArray)
+                {
+                    for (int index = 0; index < word.Length; index++)
+                    {
+                        if (index < 1)
+                        {
+                            result += word[0].ToString().ToUpper();
+                        }
+                        else
+                        {
+                            result += word[index];
+                        }
+                    }
+                    result += " ";
+                }
+
             }
 
-            return $"{arrayToString}";
+            return result.TrimEnd(' ');
             
         }
+
     }
+    
 }

@@ -10,6 +10,46 @@ namespace Edabit
     class Medium
     {
         /// <summary>
+        /// Make each 1st Letter to Uppercase - https://edabit.com/challenge/uz4r69EHHSQMosT8D
+        /// </summary>
+        /// <param name="str">Input phrase to work with</param>
+        /// <returns>Uppercase of each 1st letter</returns>
+        public static string MakeTitle(string str)
+        {
+            string[] wordsArray;
+            string result = "";
+
+            wordsArray = str.Split(" ");
+
+            if (str.Length < 0)
+            {
+                return "No input";
+            }
+            else
+            {
+                foreach (string word in wordsArray)
+                {
+                    for (int index = 0; index < word.Length; index++)
+                    {
+                        if (index < 1)
+                        {
+                            result += word[0].ToString().ToUpper();
+                        }
+                        else
+                        {
+                            result += word[index];
+                        }
+                    }
+                    result += " ";
+                }
+
+            }
+
+            return result.TrimEnd(' ');
+
+        }
+
+        /// <summary>
         /// Take a string as arguments and reverse the order - https://edabit.com/challenge/pdHrsZMdhwYNEX3wY
         /// </summary>
         /// <param name="str">string to reverse</param>
