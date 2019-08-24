@@ -10,6 +10,33 @@ namespace Edabit
     class Medium
     {
         /// <summary>
+        /// Reverse words with length >= 5 - https://edabit.com/challenge/mxDncdiseARvSJA5E
+        /// </summary>
+        /// <param name="str">input string</param>
+        /// <returns>string</returns>
+        public static string ReverseSome(string str)
+        {
+            string[] wordsArray;
+            wordsArray = str.Split(" ");
+            string result = "";
+
+            foreach (string words in wordsArray)
+            {
+                if (words.Length < 5)
+                    result += words;
+                else
+                    for (int index = words.Length - 1; index >= 0; index--)
+                    {
+                        result += words[index];
+                    }
+
+                result += " ";
+            }
+
+            return $"{result}";
+        }
+
+        /// <summary>
         /// Make each 1st Letter to Uppercase - https://edabit.com/challenge/uz4r69EHHSQMosT8D
         /// </summary>
         /// <param name="str">Input phrase to work with</param>
@@ -54,7 +81,7 @@ namespace Edabit
         /// </summary>
         /// <param name="str">string to reverse</param>
         /// <returns>string</returns>
-        public static string Reverse(string str)
+        public static string ReverseAll(string str)
         {
 
             char[] stringArray;
