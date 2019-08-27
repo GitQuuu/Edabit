@@ -7,34 +7,31 @@ using System.Linq;
 
 namespace Edabit
 {
-    class WorkSheet
+    class Worksheet
     {
-        public static string NoYelling(string phrase)
+        //Write a function that takes a string of one or more words as an argument and returns the same string, but with all five or more letter words reversed.Strings passed in will consist of only letters and spaces.
+        //Spaces will be included only when more than one word is present.Examples
+        public static string Reverse(string str)
         {
-            char[] symbols = { '!', '?' };
+            string[] wordsArray;
+            wordsArray = str.Split(" ");
+            string result = "";
             
-            StringBuilder sb = new StringBuilder();
-            if (phrase.Contains('!') || phrase.Contains('?'))
+            foreach (string words in wordsArray)
             {
-                string[] words = phrase.Split(" ");
-
-                for (int i = 0; i < words.Length; i++)
-                {
-                    words[i] = words[i].TrimEnd(symbols);
-                    if (i < words.Length-1)
-                        sb.Append(words[i] + " ");
-                    else
+                if (words.Length < 5)
+                    result += words;
+                else
+                    for (int index = words.Length - 1; index >= 0; index--)
                     {
-                        sb.Append(words[i]);
-                        if (phrase.EndsWith('!'))
-                            sb.Append('!');
-                        else if (phrase.EndsWith('?'))
-                            sb.Append('?');
-                    }            
-                }
-                
+                        result += words[index];
+                    }
+
+                result += " ";
             }
-            return sb.ToString();
-        }           
+
+            return $"{result}";
+        }
     }
+    
 }

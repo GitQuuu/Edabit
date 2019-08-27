@@ -6,6 +6,18 @@ namespace Edabit
 {
     class Task
     {
+        public static void ReverseSome()
+        {
+            Console.WriteLine("Write a function that takes a string of one or more words as an argument and returns the same string, but with all five or more letter words reversed. Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.");
+        }
+        public static void MakeTitle()
+        {
+            Console.WriteLine("Create a function that takes a string as an argument and converts the first character of each word to uppercase. Return the newly formatted string.");
+        }
+        public static void Reverse()
+        {
+            Console.WriteLine("Create a function that takes a string as its argument and returns the string in reversed order.");
+        }
         public static void NoYelling()
         {
             Console.WriteLine("Create a function that takes an character and string as arguments and returns the number of times the character is found in the string.");
@@ -124,6 +136,10 @@ namespace Edabit
             
         }
 
+        /// <summary>
+        /// Print * to Console
+        /// </summary>
+        /// <param name="length">Input desired * with int</param>
         public static void PrintLine(int length)
         {
             Console.WriteLine(new string('#',length));
