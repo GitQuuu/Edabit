@@ -9,9 +9,11 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
+            Console.WriteLine(Worksheet.WurstIsBetter("I prefer Chorizo and Salami over regular wurst "));
+
             Task.PrintLine(150);
             Task.ReverseSome();
-            Console.WriteLine("Jeg hedder Nicoline Kops Le femte                    " + Worksheet.Reverse("Jeg hedder Nicoline Kops Le femte")); 
+            Console.WriteLine("Jeg hedder Nicoline Kops Le femte                    " + Medium.ReverseSome("Jeg hedder Nicoline Kops Le femte")); 
 
             Task.PrintLine(150);
             Task.MakeTitle();
