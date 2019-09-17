@@ -4,6 +4,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Edabit
 {
@@ -14,22 +15,26 @@ namespace Edabit
        then leave the sausage name unchanged. https://edabit.com/challenge/YxRSS8DEue6WNQqya */
        public static string WurstIsBetter(string str)
        {
-            string[] sausages = { "Kielbasa", "Chorizo", "Moronga", "Salami", "Sausage", "Andouille", "Naem", "Merguez", "Gurka", "Snorkers", "Pepperoni" };
+            
             string[] stringArray;
             stringArray = str.Split(" ");
             string result = "";
 
+            string[] sausages = { "Kielbasa", "Chorizo", "Moronga", "Salami", "Sausage", "Andouille", "Naem", "Merguez", "Gurka", "Snorkers", "Pepperoni" };
+
             foreach (string words in sausages)
             {
-                if (stringArray.Contains(words))
+                for (int index = 0; index < stringArray.Length; index++)
                 {
-                    result += words.Replace(words, "Wurst ");
+                    if (stringArray.Contains(words))
+                    {
 
+                        return result += str.Replace(words[index].ToString(), "wurst");
+                    }
                 }
-                else
-                {
-                    result += stringArray.ToString();
-                }         
+               
+               
+                
             }
 
             return result;
