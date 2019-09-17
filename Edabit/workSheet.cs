@@ -4,34 +4,42 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Edabit
 {
     class Worksheet
     {
-        //Write a function that takes a string of one or more words as an argument and returns the same string, but with all five or more letter words reversed.Strings passed in will consist of only letters and spaces.
-        //Spaces will be included only when more than one word is present.Examples
-        public static string Reverse(string str)
-        {
-            string[] wordsArray;
-            wordsArray = str.Split(" ");
-            string result = "";
+       /*Wurst is the best. Create a function that takes a string and replaces every mention of any type of sausage with the German 
+       word "Wurst," unless—of course—the sausage is already a type of German "Wurst" (i.e. "Bratwurst", see below), 
+       then leave the sausage name unchanged. https://edabit.com/challenge/YxRSS8DEue6WNQqya */
+       public static string WurstIsBetter(string str)
+       {
             
-            foreach (string words in wordsArray)
-            {
-                if (words.Length < 5)
-                    result += words;
-                else
-                    for (int index = words.Length - 1; index >= 0; index--)
-                    {
-                        result += words[index];
-                    }
+            string[] stringArray;
+            stringArray = str.Split(" ");
+            string result = "";
 
-                result += " ";
+            string[] sausages = { "Kielbasa", "Chorizo", "Moronga", "Salami", "Sausage", "Andouille", "Naem", "Merguez", "Gurka", "Snorkers", "Pepperoni" };
+
+            foreach (string words in sausages)
+            {
+                for (int index = 0; index < stringArray.Length; index++)
+                {
+                    if (stringArray.Contains(words))
+                    {
+
+                        return result += str.Replace(words[index].ToString(), "wurst");
+                    }
+                }
+               
+               
+                
             }
 
-            return $"{result}";
-        }
+            return result;
+       }
+       
     }
     
 }
