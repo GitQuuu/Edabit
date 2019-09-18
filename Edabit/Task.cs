@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void WurstIsBetter()
+        {
+            Console.WriteLine("Wurst is the best. Create a function that takes a string and replaces every mention of any type of sausage with the German word \"Wurst,\" unless—of course—the sausage is already a type of German \"Wurst\"(i.e. \"Bratwurst\", see below) then leave the sausage name unchanged ");
+        }
         public static void ReverseSome()
         {
             Console.WriteLine("Write a function that takes a string of one or more words as an argument and returns the same string, but with all five or more letter words reversed. Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.");

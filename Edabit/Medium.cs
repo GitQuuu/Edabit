@@ -10,6 +10,33 @@ namespace Edabit
     class Medium
     {
         /// <summary>
+        /// Replace all sausage type with the word Wurst - https://edabit.com/challenge/YxRSS8DEue6WNQqya 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string WurstIsBetter(string str)
+        {
+
+            string[] stringArray;
+            stringArray = str.Split(' ');
+
+            string[] sausages = { "sausage", "Sausage", "kielbasa", "Kielbasa", "chorizo", "Chorizo", "moronga", "Moronga", "salami", "Salami", "andouille", "Andouille", "naem", "Naem", "merguez", "Merguez", "gurka", "Gurka", "snorkers", "Snorkers", "pepperoni", "Pepperoni" };
+
+            foreach (string words in stringArray)
+            {
+                foreach (string sausage in sausages)
+                {
+                    if (words.Contains(sausage))
+                    {
+                        str = str.Replace(sausage, "Wurst");
+                    }
+                }
+            }
+
+            return str;
+        }
+
+        /// <summary>
         /// Reverse words with length >= 5 - https://edabit.com/challenge/mxDncdiseARvSJA5E
         /// </summary>
         /// <param name="str">input string</param>
