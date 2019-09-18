@@ -19,23 +19,25 @@ namespace Edabit
             string[] stringArray;
             stringArray = str.Split(" ");
             string result = "";
+            
 
             string[] sausages = { "Kielbasa", "Chorizo", "Moronga", "Salami", "Sausage", "Andouille", "Naem", "Merguez", "Gurka", "Snorkers", "Pepperoni" };
 
-            foreach (string words in sausages)
-            {
-                for (int index = 0; index < stringArray.Length; index++)
-                {
-                    if (stringArray.Contains(words))
-                    {
 
-                        return result += str.Replace(words[index].ToString(), "wurst");
-                    }
+            for (int index = 0; index < stringArray.Length; index++)
+            {
+                if (sausages.Contains(stringArray[index]))
+                {
+                    result +=  Convert.ToString(stringArray[index].Replace(stringArray[index],"wurst"));
                 }
-               
-               
-                
+                else
+                {
+                    Console.WriteLine("No match");
+                }
+
             }
+
+
 
             return result;
        }
