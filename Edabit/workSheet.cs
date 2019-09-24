@@ -6,6 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices.ComTypes;
+using System.Threading;
 using System.Xml;
 
 namespace Edabit
@@ -16,23 +17,43 @@ namespace Edabit
         
         public static string EmilTask(string numbers)
         {
-            string newString = "";
-            string[] array ={};
+            string oddNumbers = "";
+            string[] oddArray = { };
+            string oddNumbersToText = "";
             
-
             for (int i = 0; i < numbers.Length; i++)
             {
                 if (numbers[i]%2 == 1)
                 {
-                    newString += numbers[i] + " ";
-                    array = newString.Split(" ").ToArray();
+                    oddNumbers += numbers[i] +" ";
+                    oddArray = oddNumbers.Split(" ").ToArray();
                 }
-
             }
 
 
+            for (int index = 0; index < oddArray.Length-0; index++)
+            {
+                switch (int.Parse(oddArray[index]))
+                {
+                    case 9:
+                        oddNumbersToText += "Nine ";
+                        break;
+                    case 7:
+                        oddNumbersToText += "Seven ";
+                        break;
+                    case 5:
+                        oddNumbersToText += "Five ";
+                        break;
+                    case 3:
+                        oddNumbersToText += "Three ";
+                        break;
+                    case 1:
+                        oddNumbersToText += "One ";
+                        break;
+                }
+            }
 
-            return newString;
+            return oddNumbersToText;
         }
     }
 

@@ -9,7 +9,7 @@ namespace Edabit
         {
             Console.WriteLine("A run through edabit challenges\n");
 
-            Console.WriteLine(Worksheet.EmilTask("987654321"));
+            Console.WriteLine(Worksheet.EmilTask("1234"));
 
             Task.PrintLine(150);
             Task.WurstIsBetter();
