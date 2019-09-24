@@ -6,6 +6,10 @@ namespace Edabit
 {
     class Task
     {
+        public static void EmilTask1()
+        {
+            Console.WriteLine("Har en string af tal uden mellemrum og tag alle uligtal mellem 0 og 9 or skriv dem ud som bogstaver");
+        }
         public static void WurstIsBetter()
         {
             Console.WriteLine("Wurst is the best. Create a function that takes a string and replaces every mention of any type of sausage with the German word \"Wurst,\" unless—of course—the sausage is already a type of German \"Wurst\"(i.e. \"Bratwurst\", see below) then leave the sausage name unchanged ");

@@ -9,6 +9,47 @@ namespace Edabit
 {
     class Medium
     {
+        public static string EmilTask1(string numbers)
+        {
+            string oddNumbers = "";
+            string[] oddArray = { };
+            string oddNumbersToText = "";
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 1)
+                {
+                    oddNumbers += numbers[i] + " ";
+                    oddArray = oddNumbers.Split(" ").ToArray();
+                }
+            }
+
+
+            for (int index = 0; index < oddArray.Length - 1; index++)
+            {
+                switch (int.Parse(oddArray[index]))
+                {
+                    case 9:
+                        oddNumbersToText += "Nine ";
+                        break;
+                    case 7:
+                        oddNumbersToText += "Seven ";
+                        break;
+                    case 5:
+                        oddNumbersToText += "Five ";
+                        break;
+                    case 3:
+                        oddNumbersToText += "Three ";
+                        break;
+                    case 1:
+                        oddNumbersToText += "One ";
+                        break;
+                }
+            }
+
+            return oddNumbersToText;
+        }
+
         /// <summary>
         /// Replace all sausage type with the word Wurst - https://edabit.com/challenge/YxRSS8DEue6WNQqya 
         /// </summary>
