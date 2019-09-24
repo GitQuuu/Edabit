@@ -22,15 +22,12 @@ namespace Edabit
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i]%2 >= 1)
+                if (numbers[i]%2 == 1)
                 {
                     newString += numbers[i] + " ";
                     array = newString.Split(" ").ToArray();
                 }
 
-               
-
-              
             }
 
 
