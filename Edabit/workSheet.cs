@@ -17,13 +17,16 @@ namespace Edabit
         public static string EmilTask(string numbers)
         {
             string newString = "";
+            string[] array ={};
+            
 
             for (int i = 0; i < numbers.Length; i++)
             {
                 newString += numbers[i]+" ";
+                array = newString.Split(" ").ToArray();
             }
 
-    
+
 
             return newString;
         }
