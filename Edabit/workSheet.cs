@@ -31,7 +31,7 @@ namespace Edabit
             }
 
 
-            for (int index = 0; index < oddArray.Length-0; index++)
+            for (int index = 0; index < oddArray.Length-1; index++)
             {
                 switch (int.Parse(oddArray[index]))
                 {
