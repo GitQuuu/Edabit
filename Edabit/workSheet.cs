@@ -4,37 +4,29 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices.ComTypes;
+using System.Xml;
 
 namespace Edabit
 {
     class Worksheet
     {
-        /*Wurst is the best. Create a function that takes a string and replaces every mention of any type of sausage with the German 
-        word "Wurst," unless—of course—the sausage is already a type of German "Wurst" (i.e. "Bratwurst", see below), 
-        then leave the sausage name unchanged. https://edabit.com/challenge/YxRSS8DEue6WNQqya */
-        public static string WurstIsBetter(string str)
+        /*Har en string af tal uden mellemrum og tak alle uligtal mellem 0 og 9 or skriv dem ud som bogstaver */
+        
+        public static string EmilTask(string numbers)
         {
+            string newString = "";
 
-            string[] stringArray;
-            stringArray = str.Split(' ');
-
-            string[] sausages = { "sausage","Sausage","kielbasa","Kielbasa","chorizo","Chorizo", "moronga","Moronga","salami","Salami","andouille","Andouille","naem","Naem","merguez","Merguez","gurka","Gurka","snorkers","Snorkers","pepperoni","Pepperoni" };
-
-            foreach (string words in stringArray)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                foreach (string sausage in sausages)
-                {
-                    if (words.Contains(sausage))
-                    {
-                        str = str.Replace(sausage, "Wurst");
-                    }
-                }
+                newString += numbers[i]+" ";
             }
 
-            return str;
-        }
+    
 
+            return newString;
+        }
     }
 
 }
