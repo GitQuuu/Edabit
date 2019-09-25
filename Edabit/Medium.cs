@@ -19,33 +19,28 @@ namespace Edabit
             {
                 if (numbers[i] % 2 == 1)
                 {
-                    oddNumbers += numbers[i] + " ";
-                    oddArray = oddNumbers.Split(" ").ToArray();
+
+                    switch (numbers[i])
+                    {
+                        case '9':
+                            oddNumbersToText += "Nine ";
+                            break;
+                        case '7':
+                            oddNumbersToText += "Seven ";
+                            break;
+                        case '5':
+                            oddNumbersToText += "Five ";
+                            break;
+                        case '3':
+                            oddNumbersToText += "Three ";
+                            break;
+                        case '1':
+                            oddNumbersToText += "One ";
+                            break;
+                    }
                 }
             }
 
-
-            for (int index = 0; index < oddArray.Length - 1; index++)
-            {
-                switch (int.Parse(oddArray[index]))
-                {
-                    case 9:
-                        oddNumbersToText += "Nine ";
-                        break;
-                    case 7:
-                        oddNumbersToText += "Seven ";
-                        break;
-                    case 5:
-                        oddNumbersToText += "Five ";
-                        break;
-                    case 3:
-                        oddNumbersToText += "Three ";
-                        break;
-                    case 1:
-                        oddNumbersToText += "One ";
-                        break;
-                }
-            }
 
             return oddNumbersToText;
         }

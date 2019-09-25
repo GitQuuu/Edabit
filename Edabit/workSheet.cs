@@ -13,48 +13,21 @@ namespace Edabit
 {
     class Worksheet
     {
-        /*Har en string af tal uden mellemrum og tak alle uligtal mellem 0 og 9 or skriv dem ud som bogstaver */
-        
-        public static string EmilTask(string numbers)
-        {
-            string oddNumbers = "";
-            string[] oddArray = { };
-            string oddNumbersToText = "";
-            
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i]%2 == 1)
-                {
-                    oddNumbers += numbers[i] +" ";
-                    oddArray = oddNumbers.Split(" ").ToArray();
-                }
-            }
+        /*lav et for loop der fjerner en character efter 1 plads derefter 2 pladser 3.. osv så skole bliver til sol */
 
+        //public static string EmilTask2(string input)
+        //{
+        //    string result = "";
+        //    char[] inputToArray = { };
 
-            for (int index = 0; index < oddArray.Length-1; index++)
-            {
-                switch (int.Parse(oddArray[index]))
-                {
-                    case 9:
-                        oddNumbersToText += "Nine ";
-                        break;
-                    case 7:
-                        oddNumbersToText += "Seven ";
-                        break;
-                    case 5:
-                        oddNumbersToText += "Five ";
-                        break;
-                    case 3:
-                        oddNumbersToText += "Three ";
-                        break;
-                    case 1:
-                        oddNumbersToText += "One ";
-                        break;
-                }
-            }
+        //    for (int index = 0; index < input.Length; index += 2)
+        //    {
+        //        inputToArray += input[index];
+        //    }
 
-            return oddNumbersToText;
-        }
+        //    return result;
+        //}
+
     }
 
 }
