@@ -11,14 +11,48 @@ namespace Edabit
     {
         public static string EmilTask1(string numbers)
         {
-            string[] numberNames = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"}; // used as kinda switch:case
-            string answer = "";
+            //string[] numberNames = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"}; // used as kinda switch:case
+            //string answer = "";
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //   answer = numbers[i] % 2 == 1 ? answer += numberNames[(int)char.GetNumericValue(numbers[i])] : answer += numbers[i];
+            //}
+
+            //return answer;
+
+            string oddNumbers = "";
+            string[] oddArray = { };
+            string oddNumbersToText = "";
+
             for (int i = 0; i < numbers.Length; i++)
             {
-               answer = numbers[i] % 2 == 1 ? answer += numberNames[(int)char.GetNumericValue(numbers[i])] : answer += numbers[i];
+                if (numbers[i] % 2 == 1)
+                {
+                    oddNumbers += numbers[i] + " ";
+                    oddArray = oddNumbers.Split(" ").ToArray();
+
+                    switch (numbers[i])
+                    {
+                        case '9':
+                            oddNumbersToText += "Nine ";
+                            break;
+                        case '7':
+                            oddNumbersToText += "Seven ";
+                            break;
+                        case '5':
+                            oddNumbersToText += "Five ";
+                            break;
+                        case '3':
+                            oddNumbersToText += "Three ";
+                            break;
+                        case '1':
+                            oddNumbersToText += "One ";
+                            break;
+                    }
+                }
             }
 
-            return answer;
+            return oddNumbersToText;
         }
 
         /// <summary>
