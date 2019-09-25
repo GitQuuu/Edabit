@@ -11,34 +11,14 @@ namespace Edabit
     {
         public static string EmilTask1(string numbers)
         {
-            
+            string[] numberNames = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"}; // used as kinda switch:case
+            string answer = "";
             for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i] % 2 == 1)
-                {
-                    switch (numbers[i])
-                    {
-                        case '9':
-                            numbers = numbers.Replace("9", "Nine ");
-                            break;
-                        case '7':
-                            numbers = numbers.Replace("7", "Seven ");
-                            break;
-                        case '5':
-                            numbers = numbers.Replace("5", "Five ");
-                            break;
-                        case '3':
-                            numbers = numbers.Replace("3", "Three ");
-                            break;
-                        case '1':
-                            numbers = numbers.Replace("1", "One ");
-                            break;
-                    }
-                }
+               answer = numbers[i] % 2 == 1 ? answer += numberNames[(int)char.GetNumericValue(numbers[i])] : answer += numbers[i];
             }
 
-
-            return numbers;
+            return answer;
         }
 
         /// <summary>
