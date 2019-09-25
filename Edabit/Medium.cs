@@ -11,38 +11,34 @@ namespace Edabit
     {
         public static string EmilTask1(string numbers)
         {
-            string oddNumbers = "";
-            string[] oddArray = { };
-            string oddNumbersToText = "";
-
+            
             for (int i = 0; i < numbers.Length; i++)
             {
                 if (numbers[i] % 2 == 1)
                 {
-
                     switch (numbers[i])
                     {
                         case '9':
-                            oddNumbersToText += "Nine ";
+                            numbers = numbers.Replace("9", "Nine ");
                             break;
                         case '7':
-                            oddNumbersToText += "Seven ";
+                            numbers = numbers.Replace("7", "Seven ");
                             break;
                         case '5':
-                            oddNumbersToText += "Five ";
+                            numbers = numbers.Replace("5", "Five ");
                             break;
                         case '3':
-                            oddNumbersToText += "Three ";
+                            numbers = numbers.Replace("3", "Three ");
                             break;
                         case '1':
-                            oddNumbersToText += "One ";
+                            numbers = numbers.Replace("1", "One ");
                             break;
                     }
                 }
             }
 
 
-            return oddNumbersToText;
+            return numbers;
         }
 
         /// <summary>
