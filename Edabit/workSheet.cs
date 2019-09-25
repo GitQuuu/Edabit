@@ -15,18 +15,18 @@ namespace Edabit
     {
         /*lav et for loop der fjerner en character efter 1 plads derefter 2 pladser 3.. osv så skole bliver til sol */
 
-        //public static string EmilTask2(string input)
-        //{
-        //    string result = "";
-        //    char[] inputToArray = { };
+        public static string EmilTask2(string input)
+        {
+            string result = "";
+            char[] inputToArray = { };
 
-        //    for (int index = 0; index < input.Length; index += 2)
-        //    {
-        //        inputToArray += input[index];
-        //    }
+            for (int index = 0; index < input.Length; index += 2)
+            {
+                
+            }
 
-        //    return result;
-        //}
+            return result;
+        }
 
     }
 
